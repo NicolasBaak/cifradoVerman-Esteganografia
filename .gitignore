@@ -1,0 +1,4 @@
+final
+resultados/descifrado/*.txt
+resultados/secreto/*.txt
+resultados/secreto/*.txt_bak
