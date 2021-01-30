@@ -43,14 +43,15 @@ int main(int argc, char *argv[])
          printf("\n Recuperar archivo:\n");
          printf("nombre-imagen.pgm: ");
          scanf("%s", imagen);
-         recupera(imagen);
          printf("\nclave de cifrado: ");
          scanf("%s", key);
+
+         recupera(imagen);
          decompres(comprimido, descomprimido);
          vernam(descomprimido, key, descifrado);
 
 
-         printf("La imagen %s genero el archivo en /resultados/descifrado/%s\n\n\n", imagen, archivo);
+         printf("La imagen %s genero el archivo en /resultados/descifrado %s\n\n\n", imagen, archivo);
          break;
       case 3:
          printf("\n\nGracias por usar nuestro programa :) \n");
