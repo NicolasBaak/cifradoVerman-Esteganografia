@@ -3,17 +3,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 int menu(){
-  
+   int p = 0;
+   int seleccion;
+   while(p!=1){
    printf("Bienvenido a nuestro programa para ocultar/mostrar informacion\n");
    printf("1.- Ocultar información\n");
    printf("2.- Recuperar información\n");
-   printf("3.- Salir");
+   printf("3.- Salir del programa\n");
    printf("-Ingresa su numero: 1 ó 2\nOpción: ");
-   int selection;
-   scanf("%d", &selection);
-   return selection;
+   seleccion = getchar();
+
+   if( isdigit(seleccion) && seleccion>0 && seleccion<4){
+      p = 1;
+   }else{
+      printf("\n\nError: ¡¡Ingresa una opcion valida!!\n\n\n");
+   }
+   }
+
+   return seleccion;
 }
 
 void vernam(char *fn1, char *key, char *fn2){
