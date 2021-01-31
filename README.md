@@ -14,3 +14,7 @@ Ahora para ejecuta el programa
 ```
 ./'nombre-ejecutable'
 ```
+puede que sea necesario crear una carpeta llamada 'resultados' y dentro de esta dos carpetas 'secreto' y 'descifrado'
+
+en resultados/secreto Se almacenan los archivos comprimidos y cifrados
+en resultados/descifrado Se almacena el archivo expraido de la imagen
