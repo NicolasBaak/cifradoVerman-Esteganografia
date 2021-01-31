@@ -9,17 +9,20 @@ int menu(){
    int p = 0;
    int seleccion;
    while(p!=1){
-   printf("Bienvenido a nuestro programa para ocultar/mostrar informacion\n");
+      system("clear");
+   printf("===> Bienvenido a nuestro programa para ocultar/mostrar informacion secreta <===\n\n");
    printf("1.- Ocultar información\n");
    printf("2.- Recuperar información\n");
    printf("3.- Salir del programa\n");
-   printf("-Ingresa su numero: 1 ó 2\nOpción: ");
+   printf("-Ingresa su numero: 1, 2 ó 3\nOpción: ");
    seleccion = getchar();
-
-   if( isdigit(seleccion) && seleccion>0 && seleccion<4){
-      p = 1;
+   if( isdigit(seleccion)){
+      seleccion -=48;
+      if(seleccion==1 || seleccion==2 || seleccion==3)
+         p = 1;
    }else{
       printf("\n\nError: ¡¡Ingresa una opcion valida!!\n\n\n");
+      
    }
    }
 
@@ -610,7 +613,7 @@ void recupera(char *archivoImg){
 	unsigned char dato;
 	k = sz_header_img;
 	
-	printf("\nRecuperando nombre y longitud del archivo oculto\n");
+	//printf("\nRecuperando nombre y longitud del archivo oculto\n");
 	//leer y decodificar el encabezado
 	for(i=0; i<(sizeof(Header) ); i++){
 		dato=0;
@@ -636,7 +639,7 @@ void recupera(char *archivoImg){
 	Header h2;
 	memcpy(&h2, buffer1, sizeof(Header));
 
-	printf("\nNombre: %s   bytes: %ld \n", h2.nf, h2.sz);
+	//printf("\nNombre: %s   bytes: %ld \n", h2.nf, h2.sz);
 	
 	buffer2 = (unsigned char*) malloc (sizeof(char)*h2.sz );
 	if (buffer2 == NULL) {fputs ("error de memoria buffer2 ",stderr); exit (2);}
@@ -677,7 +680,7 @@ void recupera(char *archivoImg){
 	}
 	
 	result = fwrite (buffer2,1,h2.sz,nuevo);
-	printf("\nSe genero archivo: %s \n", nnombre);
+	//printf("\nSe genero archivo: %s \n", nnombre);
 	
 	free(buffer2);
 	free(bufferOut);

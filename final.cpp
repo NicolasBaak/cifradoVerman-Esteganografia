@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "funciones.h"
+#include "./librerias/funciones.h"
 
 int main(int argc, char *argv[])
 {
@@ -23,42 +23,47 @@ int main(int argc, char *argv[])
       switch (seleccion)
       {
       case 1:
-         
-         printf("\n Ocultar archivo:\n");
-         printf("nombre-archivo.txt: ");
+         //Obtener la información:
+         printf("\n====  Ocultar archivo:  ====\n\n");
+         printf("\nNombre del archivo a ocultar (nombre-archivo.txt):  ");
          scanf("%s", archivo);
-         printf("\nclave de cifrado: ");
+         printf("\n¿Cual va ser la clave de cifrado? (la vas a necesitar para recuperar tu archivo): ");
          scanf("%s", key);
-         printf("\nnombre-imagen.pgm: ");
+         printf("\n¿En que imagen se va ocultar la información? (nombre-imagen.pgm): ");
          scanf("%s", imagen);
-       
-
+         //Implementando los algoritmos: 
          vernam(archivo, key, cifrado);
          compres(cifrado, comprimido);
          oculta(imagen, comprimido);
-         
-         printf("Hemos escondido el archivo %s en la imagen %s\n\n\n", archivo, imagen);
+
+         getchar();
+         printf("\n--> Hemos escondido el archivo '%s' en la imagen '%s'\n\n\n", archivo, imagen);
+         printf("pulsa cualquier tecla para continuar...");
+         getchar();
          break;
       case 2:
-         printf("\n Recuperar archivo:\n");
-         printf("nombre-imagen.pgm: ");
+         //Obtener la información:
+         printf("\n====  Recuperar archivo:  ====\n\n");
+         printf("¿Dónde esta la imagen con la información? (nombre-imagen.pgm): ");
          scanf("%s", imagen);
-         printf("\nclave de cifrado: ");
+         printf("\n¿Cual es la clave de cifrado? (la necesitamos para descifrar el archivo): ");
          scanf("%s", key);
-
+         //Implementando los algoritmos:
          recupera(imagen);
          decompres(comprimido, descomprimido);
          vernam(descomprimido, key, descifrado);
 
-
-         printf("La imagen %s genero el archivo en /resultados/descifrado %s\n\n\n", imagen, archivo);
+         getchar();
+         printf("\n--> La imagen '%s' genero el archivo en la carpeta '/resultados/descifrado/%s'\n\n\n", imagen, archivo);
+         printf("pulsa cualquier tecla para continuar...");
+         getchar();
          break;
       case 3:
-         printf("\n\nGracias por usar nuestro programa :) \n");
+         printf("\n\n==> Gracias por usar nuestro programa :)\n\n");
          exit(0);
          break;
      default:
-            printf ("\n\nSeleccione una opción valida \n\n\n");
+            printf ("\n\nSeleccione una opción valida! \n\n\n");
             break;
       }
       seleccion = menu();
