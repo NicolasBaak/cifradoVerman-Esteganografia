@@ -1,12 +1,3 @@
-/* 
-   ADA10: Proyecto Integrador
-      Alumnos:
-         - Baak Poot Nicolas Alejandro
-         - Gongora Gamboa Diego Joel    
-         - Moreno Carvajal Pedro Abel
-   Integracion de algoritmo de cifrado, compresion/descompresion de datos y estenografia.
-   Todas las funciones se encuentran en la libreria de funciones.h
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
