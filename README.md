@@ -20,4 +20,4 @@ En resultados/secreto
 
 En resultados/descifrado 
 
-    Se almacena el archivo expraido de la imagen
+    Se almacena el archivo extraido de la imagen
