@@ -1,13 +1,812 @@
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
-and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum 
-et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
-"Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
-Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
-Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+===Codificación===
+
+Es el proceso por el cual la informacion de una fuente es convertida en simbolos para ser cominucada o transmitida.
+
+En otras palabras, es la aplicacion de las reglas de un código.
+
+El proceso contrario es la decodificación (o decoding), es decir, la conversion de esos simbolos a informacion que pueda ser entendida por el receptor.
+
+El cifrado es un método que permite aumentar la seguridad de un mensaje o de un archivo mediante la codificación del contenido, de manera que solo pueda leerlo la persona que cuente con la clave de cifrado adecuada para descodificarlo.
+
+===El cifrado Vernam===
+
+El cifrado Vernam es un algoritmo de criptografía inventado por Gilbert Vernam, ingeniero AT&T Bell Labs, en 1917.
+Funcionamiento
+En terminología moderna, un cifrado de Vernam es un cifrado de flujo en el que el texto en claro se combina, mediante la operación XOR, con un flujo de datos aleatorio o pseudoaleatorio del mismo tamaño, para generar un texto cifrado. El uso de datos pseudoaleatorios generados por un generador de números pseudoaleatorios criptográficamente seguro es una manera común y efectiva de construir un cifrado en flujo. El RC4 es un ejemplo de cifrado de Vernam que se utiliza con frecuencia en Internet.
+Utilización
+Posteriormente a la invención del cifrado de Vernam, Joseph Mauborgne propuso que la cinta de papel contuviera información completamente aleatoria. Las dos ideas, combinadas con el uso único de las claves, implementan la libreta de un solo uso, aunque ninguno de los dos inventores utilizó ese nombre.
+Claude Shannon, también de Bell Labs, demostró que la libreta de un solo uso es irrompible (trabajo realizado entre 1940 y 1945; publicado por primera vez en la Bell Labs Technical Journal, 1948/49). Es el primer y único método de cifrado para el que existe tal demostración.
+El método Vernam fue utilizado durante la segunda guerra mundial por espías de diversas nacionalidades, a los que se les daba una secuencia binaria aleatoria con la recomendación de utilizarla con un único proceso de cifrado.
+Variantes
+En la actualidad el cifrado de Vernam puede ser utilizado con diferentes codificaciones para el alfabeto, entre ellas, se puede utiliza la codificación ASCII, sin embargo, por utilizar la operación XOR, el criptograma puede tener códigos de control de la tabla ASCII, es decir, no imprimibles, por lo que es necesario representar el criptograma con el número de código ASCII, generalmente se utiliza la numeración hexadecimal para utilizar solo dos dígitos por símbolo. 
+
+
+===Algoritmo de Huffman===
+El algoritmo de Huffman es un algoritmo para la construcción de códigos de Huffman, desarrollado por David A. Huffman en 1952 y descrito en A Method for the Construction of Minimum-Redundancy Codes.1​
+Este algoritmo toma un alfabeto de n símbolos, junto con sus frecuencias de aparición asociadas, y produce un código de Huffman para ese alfabeto y esas frecuencias. 
+
+===Esteganografía==
+
+La esteganografía (del griego στεγανος steganos, "cubierto" u "oculto", y γραφος graphos, "escritura") trata el estudio y aplicación de técnicas que permiten ocultar mensajes u objetos, dentro de otros, llamados portadores, de modo que no se perciba su existencia. Es decir, procura ocultar mensajes dentro de otros objetos y de esta forma establecer un canal encubierto de comunicación, de modo que el propio acto de la comunicación pase inadvertido para observadores que tienen acceso a ese canal.
+
+Una forma de diferenciar la esteganografía con la criptografía común es que la criptografía solo cifra los archivos manteniendo el archivo original visible, pero al abrirlo mostrará una secuencia de caracteres que no permitirá su lectura y para ver su contenido original es necesario conocer la clave. En la esteganografía, puede verse un archivo con un formato diferente, y para conocer su contenido original será necesario conocer la clave y el software con el que se ocultó.
+
+Esta ciencia ha suscitado mucho interés en los últimos años, especialmente en el área de seguridad informática, debido a que ha sido utilizada por organizaciones criminales y terroristas. No obstante, no se trata de nada nuevo, pues se lleva empleando desde la antigüedad, y tradicionalmente la han utilizado las instituciones policíacas, militares y de inteligencia, y también criminales o civiles que desean evadir el control gubernamental, especialmente en regímenes tiránicos.
+
+La esteganografía clásica se basaba únicamente en el desconocimiento del canal encubierto utilizado, mientras que en la era moderna también se emplean canales digitales (imagen, video, audio y protocolos de comunicaciones, entre otros) para alcanzar el objetivo. En muchos casos, el objeto contenedor es conocido, y lo que se ignora es el algoritmo de inserción de la información en dicho objeto.
+
+Para que pueda hablarse de esteganografía, debe haber voluntad de comunicación encubierta entre el emisor y el receptor. 
+Diferencias con la criptografía
+
+Si bien la esteganografía puede confundirse con la criptografía, por ser ambas parte de los procesos de protección de la información, son disciplinas distintas, tanto en su forma de implementar como en su objetivo mismo.
+
+Mientras que la criptografía se utiliza para cifrar o codificar información de manera que sea ininteligible para un probable intruso, a pesar que conozca su existencia, la esteganografía oculta la información en un portador de modo que no sea advertido el hecho mismo de su existencia y envío. De esta última forma, un probable intruso ni siquiera sabrá que se está transmitiendo información sensible.
+
+Sin embargo, la criptografía y la esteganografía pueden complementarse, dando un nivel de seguridad extra a la información, es decir, es muy común (aunque no imprescindible) que el mensaje a esteganografiar sea previamente cifrado, de tal modo que a un eventual intruso no solo le costará advertir la presencia de la mensajería oculta, sino que, si la llegara a descubrir, la encontraría cifrada.
+Motivación
+
+La utilidad del uso de la esteganografía se manifiesta en el llamado problema del prisionero (Gustavus J. Simmons, 1983). Resumidamente, en el problema del prisionero tenemos dos prisioneros, A y B, que quieren comunicarse de forma confidencial para escapar. El problema es que solo pueden intercambiar mensajes a través de un guardián. El guardián puede leer, modificar o generar él mismo los mensajes. Si el guardián detecta cualquier comunicación que pueda ser utilizada para escapar (por ejemplo, si detecta un cifrado), dejará de transmitir los mensajes. En este escenario, los prisioneros necesitan establecer un canal encubierto.
+
+El uso de la esteganografía permite disponer de un canal encubierto de forma que es posible comunicarse sin ser detectado. La estrategia que sigue la esteganografía para resolver el problema del prisionero es esconder los datos que deben ser detectados, entre los mensajes permitidos por el guardián.
+Funcionamiento y terminología
+
+La idea que sigue la esteganografía es enviar el mensaje oculto (E) “escondido” en un mensaje de apariencia inocua (C) que servirá de “camuflaje”. Esto es, se aplica una función de esteganografía   f ( E ) {\displaystyle \ f(E)} {\displaystyle \ f(E)}. El resultado de aplicar la función (O), se envía por un canal inseguro y puede ser visto sin problemas por el guardián. Finalmente, el otro prisionero recibe el objeto O y, aplicando la función inversa f − 1 ( O ) {\displaystyle f^{-1}(O)} {\displaystyle f^{-1}(O)}, puede recuperar el mensaje oculto.1​
+
+La terminología típica usada en la esteganografía es:2​
+
+    Se define como esquema esteganográfico al conjunto de componentes que permite llevar a cabo la comunicación esteganográfica.
+    El portador es todo aquel conjunto de datos que es susceptible de ser alterado para incorporarle el mensaje que queremos mantener en secreto. Puede ser de muchos tipos o formatos. Ejemplos: imagen (en sus distintos formatos), audio (en sus distintos formatos), texto plano, archivos binarios, un mensaje de protocolo de comunicación.
+    Se habla de mensaje-legítimo para referirse al mensaje transportado por el portador.
+    Se llama mensaje esteganográfico al mensaje que queremos mantener en secreto y queremos esconder dentro del portador. Puede ser de distintos tipos o formatos. Ejemplos: imagen (en sus distintos formatos), audio (en sus distintos formatos), texto plano, archivos binarios.
+    Estego-algoritmo es el algoritmo esteganográfico que indica cómo realizar el procedimiento de incorporación del mensaje que queremos mantener en secreto en el portador.
+    La acción de ocultar el mensaje dentro del portador se denomina empotrar (del inglés to embed).
+    Se llama estego-mensaje al resultado de empotrar el mensaje esteganográfico dentro del portador.
+    La acción de la recuperación, a partir del estego-mensaje, del mensaje oculto esteganográfico se denomina extraer.
+    Por el rol desempeñado dentro del proceso esteganográfico, el emisor también se llama embebedor y el receptor, extractor. Al igual que en todo acto de comunicación convencional, es común que los roles de emisor y receptor se intercambien sucesivamente entre las partes que se comunican.
+    Se llama esteganalista o estegoanalista a la persona que intenta determinar la existencia o ausencia de un mensaje esteganográfico. Obsérvese que basta con determinar la existencia del mensaje; no tiene que llegar al contenido en sí. Es decir, un esteganalista es el que hace estegoanálisis.3​
+    Los canales de selección son canales adicionales al portador utilizado para embeber donde se comunica qué posiciones del portador se utilizan para la comunicación esteganográfica. Por ejemplo, si el portador es un libro de texto, un canal de selección podría estar definido por una sucesión de números naturales que representan la posición de cada una de las palabras dentro del libro de texto, que se deben considerar para construir el mensaje esteganográfico.2​4​
+    Las clases de equivalencia corresponden a pares de elementos del portador utilizado que tienen una interpretación semántica equivalente en la comunicación legítima, pero el uso de un elemento u otro tiene un significado acordado en la comunicación esteganográfica. Por ejemplo, las palabras 'lindo' y 'bonito' son sinónimos en español y podrían utilizarse indistintamente en un contexto. Un lector no notaría la diferencia en la semántica del texto, pero puede aprovecharse para construir el mensaje esteganográfico.2​4​
+
+La capacidad de alterar el portador de manera imperceptible es posible gracias a la existencia de redundancia en el mismo. Las alteraciones pueden realizarse tanto en el contenido como en otros parámetros; por ejemplo, en el tiempo de respuesta en la emisión del portador.
+Clasificación según el estego-algoritmo
+
+El estego-algoritmo es el algoritmo esteganográfico que indica cómo realizar el procedimiento de incorporación del mensaje esteganográfico en el portador para obtener el estego-mensaje. Según el tipo de estego-algoritmo, es posible distinguir dos tipos de esteganografía:5​ esteganografía pura y esteganografía de clave secreta.
+Esteganografía pura
+
+En este tipo de esteganografía, el estego-algoritmo establece un método fijo para incorporar el mensaje esteganográfico en el portador para obtener el estego-mensaje. En esta estrategia se está suponiendo que el guardián del problema del prisionero no conoce nada sobre el estego-algoritmo. Por tanto, la seguridad se basa en la oscuridad. Este enfoque para conseguir la seguridad pocas veces funciona y es especialmente desastroso en el caso de la criptografía.
+Esteganografía de clave secreta
+
+En este tipo de esteganografía, el estego-algoritmo está parametrizado por una clave esteganográfica a la que se le llama estego-clave, que define cómo aplicar el algoritmo. Por ejemplo, la estego-clave podría indicar el lugar dentro del portador a partir del cual se comienza a realizar la incorporación del mensaje secreto. El emisor y el receptor deben acordar previamente tanto el estego-algoritmo como la estego-clave.
+
+El proceso de extracción consiste en aplicar el estego-algoritmo y la estego-clave necesarios al estego-mensaje recibido para obtener el mensaje esteganográfico.
+
+En este escenario, el guardián del problema del prisionero puede conocer el estego-algoritmo, pero no conoce la estego-clave, que se emplea en el mismo. En esta estrategia, la seguridad se basa en el principio de Kerckhoffs. Aplicado a la esteganografía, el principio de Kerckhoffs podría incluir, como información revelable, el acceso a la información portadora antes de que se le aplique el estego-algoritmo.
+Historia
+
+Estos son algunos ejemplos o historias que demuestran que la esteganografía ha estado presente desde tiempos antiguos y que constantemente va evolucionando.
+Heródoto
+
+Probablemente uno de los ejemplos más antiguos del uso de que la esteganografía sea el referido por Heródoto en Las historias.6​ En este libro, describe cómo un personaje tomó un cuadernillo de dos hojas o tablillas, rayó bien la cera que las cubría y en la madera misma grabó el mensaje y lo volvió a cubrir con cera regular. Otra historia, en el mismo libro, relata cómo otro personaje había rasurado a navaja la cabeza de su esclavo de mayor confianza, le tatuó el mensaje en el cuero cabelludo, esperó después a que le volviera a crecer el cabello y lo mandó al receptor del mensaje, con instrucciones de que le rasuraran la cabeza.
+Siglo XV
+El científico italiano Giovanni Battista della Porta descubrió cómo esconder un mensaje dentro de un huevo cocido. El método consistía en preparar una tinta mezclando una onza de alumbre y una pinta de vinagre, y luego se escribía en la cáscara. La solución penetra en la cáscara porosa y deja un mensaje en la superficie de la albúmina del huevo duro, que solo se puede leer si se pela el huevo. 
+Primer libro
+
+El origen del vocablo esteganografía se remonta a principios del siglo XVI. El abad alemán Johannes Trithemius escribió un libro al que tituló Steganographia. En él se trataban temas referentes a la encriptación de mensajes, así como métodos para conjurar a los espíritus. El libro en cuestión se considera hoy en día un libro maldito y es muy apreciado por los esoteristas. Aparte de este título, también publicó Polygraphiae Libri Sex, un compendio de seis tomos sobre criptografía que no participaba de los elementos esotéricos de su libro anterior.
+Otros libros
+
+    En Sueño de Polífilo (Hypnerotomachia Poliphili, ed. Aldus Manutius), escrito por Francesco Colonna en 1499, se puede obtener la frase Poliam frater Franciscus Columna peramavit (‘El hermano Francesco Colonna amó apasionadamente a Polia’) si se toma la primera letra de los treinta y ocho capítulos.
+    Gaspar Schott (1665): Schola steganographica.
+    Ian Caldwell, Dustin Thomason (2004): Enigma del cuatro.
+    Lev Grossman (2004): El códice secreto.
+
+Segunda Guerra Mundial
+
+Durante la segunda guerra mundial, se usaron los microfilmes, en los puntos de las íes o en los signos de puntuación, para enviar mensajes. Los prisioneros usaban i, j, t y f para ocultar mensajes en código morse. Pero uno de los sistemas más ingeniosos se conoce con el nombre de Null Cipher.7​ Consiste en enviar un mensaje, lo más común posible, y elegir cierta parte de él para ocultar el mensaje real. Un ejemplo es el texto siguiente:
+
+Apparently neutral's protest is thoroughly discounted and ignored. Isman hard hit. Blockade issue affects pretext for embargo on by products, ejecting suets and vegetable oils. (Al parecer la protesta neutral es completamente descontada e ignorada. Isman afectados. Problema de bloqueo afecta pretexto de embargo sobre los productos, consigue expulsar sebo y aceites vegetales)
+
+Si tomamos la segunda letra de cada palabra, aparece el mensaje Pershing sails from NYr June i. ("Pershing zarpa desde Nueva York el 1 de junio.")
+Tintas invisibles
+
+No está claro desde qué época se comenzaron a utilizar, pero sin duda se han usado a lo largo de la historia y hasta la actualidad. Las más conocidas se pueden clasificar en dos categorías:
+
+    Básicas: sustancias con alto contenido en carbono: leche, orina, zumo de limón, jugo de naranja, jugo de manzana, jugo de cebolla, solución azucarada, miel diluida, coca cola diluida, vino, vinagre, etc. Básicamente, sin importar cuál de las “tintas” mencionadas se utilice, el mensaje quedará invisible, y al calentar la superficie donde se escribió, el carbono reaccionará, y aparecerá el mensaje en un tono marrón.
+
+    Más sofisticadas: aparecen tras una reacción química, o tras ser expuestas a la luz de cierta longitud de onda (IR, UV y otras).
+Esteganografía clásica y moderna
+
+Esteganografía “clásica”: métodos completamente oscuros.
+
+    Protección basada en desconocer el canal encubierto específico que se está usando.
+
+Esteganografía moderna: uso de canales digitales:
+
+    Archivo de texto (páginas web, código fuente, etc.)
+    Audio digital
+    Imágenes y vídeo digitales
+    Archivos ejecutables
+    Protocolos de comunicaciones
+
+Técnicas digitales
+
+Existen numerosos métodos y algoritmos utilizados para ocultar la información dentro de archivos multimedia: imágenes, audio y vídeo. A continuación se indican algunos de los más usados.
+Enmascaramiento y filtrado
+
+En este caso la información se oculta dentro de una imagen digital empleando marcas de agua que incluyen información, como el derecho de autor, la propiedad o licencias. El objetivo es diferente de la esteganografía tradicional (básicamente comunicación encubierta), ya que es añadir un atributo a la imagen que actúa como cubierta. De este modo se amplía la cantidad de información presentada.
+Algoritmos y transformaciones
+
+Esta técnica oculta datos basados en funciones matemáticas que se utilizan a menudo en algoritmos de la compresión de datos. La idea de este método es ocultar el mensaje en los bits de datos menos importantes.
+Inserción en el bit menos significativo
+
+Este es el método moderno más común y popular usado para esteganografía, también es uno de los llamados métodos de sustitución. Consiste en hacer uso del bit menos significativo de los píxeles de una imagen y alterarlo. La misma técnica puede aplicarse a vídeo y audio, aunque no es lo más común. Hecho así, la distorsión de la imagen en general se mantiene al mínimo (la perceptibilidad es prácticamente nula), mientras que el mensaje es esparcido a lo largo de sus píxeles. Esta técnica funciona mejor cuando el archivo de imagen es grande, posee fuertes variaciones de color ("imagen ruidosa") y también aventaja cuanto mayor sea la profundidad de color. Asimismo esta técnica puede utilizarse eficazmente en imágenes a escala de gris, pero no es apropiada para aquellas en color de 8 bit paletizadas (misma estructura que las de escalas de gris, pero con paleta en color). En general, los mejores resultados se obtienen en imágenes con formato de color RGB (tres bytes, componentes de color, por píxel).
+
+Ejemplo:
+
+El valor (1 1 1 1 1 1 1 1) es un número binario de 8 bits. Al bit ubicado más a la derecha se le llama "bit menos significativo" (LSB) porque es el de menor peso, alterándolo cambia en la menor medida posible el valor total del número representado.
+
+Un ejemplo de esteganografía: Ocultamiento de la letra "A". Si se tiene parte de una imagen con píxeles con formato RGB (3 bytes), su representación original podría ser la siguiente (3 píxeles, 9 bytes):
+
+(1 1 0 1 1 0 1 0) (0 1 0 0 1 0 0 1) (0 1 0 0 0 0 1 1)
+
+(0 0 0 1 1 1 1 0) (0 1 0 1 1 0 1 1) (1 1 0 1 1 1 1 1)
+
+(0 0 0 0 1 1 1 0) (0 1 0 0 0 1 1 1) (0 0 0 0 0 1 1 1)
+
+El mensaje a cifrar es ‘A’ cuya representación ASCII es (0 1 0 0 0 0 1), entonces los nuevos píxeles alterados serían:
+
+(1 1 0 1 1 0 1 0) (0 1 0 0 1 0 0 1) (0 1 0 0 0 0 1 0)
+
+(0 0 0 1 1 1 1 0) (0 1 0 1 1 0 1 0) (1 1 0 1 1 1 1 0)
+
+(0 0 0 0 1 1 1 0) (0 1 0 0 0 1 1 1) (0 0 0 0 0 1 1 1)
+
+Observar que se ha sustituido el bit del mensaje (letra A, marcados en negritas) en cada uno de los bits menos significativos de color de los 3 píxeles. Fueron necesarios 8 bytes para el cambio, uno por cada bit de la letra A, el noveno byte de color no se utilizó, pero es parte del tercer pixel (su tercer componente de color).
+
+El método del LSB funciona mejor en los archivos de imágenes que tienen una alta resolución y usan gran cantidad de colores. En caso de archivos de audio, favorecen aquellos que tienen muchos y diferentes sonidos que poseen una alta tasa de bits.
+
+Además este método no altera en absoluto el tamaño del archivo portador o cubierta (por eso es "una técnica de sustitución"). Posee la desventaja de que el tamaño del archivo portador debe ser mayor al mensaje a embeber; se necesitan 8 bytes de imagen por cada byte de mensaje a ocultar; es decir, la capacidad máxima de una imagen para almacenar un mensaje oculto es de su 12,5%. Si se pretende emplear una mayor porción de bits de la imagen (por ejemplo, no solo el último, sino los dos últimos), puede comenzar a ser percibible al ojo humano la alteración general provocada.
+Técnicas más utilizadas según el tipo de medio
+En documentos8​
+El uso de esteganografía en los documentos puede funcionar con solo añadir un espacio en blanco y las fichas a los extremos de las líneas de un documento. Este tipo de esteganografía es extremadamente eficaz, ya que el uso de los espacios en blanco y tabs no es visible para el ojo humano, al menos en la mayoría de los editores de texto, y se producen de forma natural en los documentos, por lo que en general es muy difícil que levante sospechas. 
+En imágenes8​
+Ejemplo utilizando técnica de LSB.
+
+El método más utilizado es el LSB, puesto que para un computador un archivo de imagen es simplemente un archivo que muestra diferentes colores e intensidades de luz en diferentes áreas (píxeles). El formato de imagen más apropiado para ocultar información es el BMP (color de 24 bits), debido a que es el de mayor proporción (imagen no comprimida) y normalmente es de la más alta calidad. Eventualmente se prefiere optar por formatos BMP de 8 bits o bien otros tales como el GIF, por ser de menor tamaño. Se debe tener en cuenta que el transporte de imágenes grandes por Internet puede despertar sospechas.
+
+Cuando una imagen es de alta calidad y resolución, es más fácil y eficiente ocultar y enmascarar la información dentro de ella.
+
+La desventaja del método LSB es que es el más conocido y popular, por tanto el más estudiado. Deja marcas similares a ruido blanco en el portador (imagen contenedora), lo cual la convierte en altamente detectable o vulnerable a ataques de estegoanálisis, para evitarlo se recurre a dispersar el mensaje, en general usando secuencias aleatorias.
+
+Es importante notar que si se oculta información dentro de un archivo de imagen y este es convertido a otro formato, lo más probable es que la información oculta dentro sea dañada y, consecuentemente, resulte irrecuperable.
+En audio8​
+
+Cuando se oculta información dentro de archivos de audio, por lo general la técnica usada es low bit encoding (baja bit de codificación), que es similar a la LSB que suele emplearse en las imágenes. El problema con el low bit encoding es que en general es perceptible para el oído humano, por lo que es más bien un método arriesgado que alguien lo use si están tratando de ocultar información dentro de un archivo de audio.
+
+Spread Spectrum también sirve para ocultar información dentro de un archivo de audio. Funciona mediante la adición de ruidos al azar a la señal de que la información se oculta dentro de una compañía aérea y la propagación en todo el espectro de frecuencias.
+
+Otro método es Echo data hiding, que usa los ecos en archivos de sonido con el fin de tratar de ocultar la información. Simplemente añadiendo extra de sonido a un eco dentro de un archivo de audio, la información puede ser ocultada. Lo que este método consigue mejor que otros es que puede mejorar realmente el sonido del audio dentro de un archivo de audio.
+En vídeo8​
+
+En vídeo, suele utilizarse el método DCT (Discrete Cosine Transform). DCT funciona cambiando ligeramente cada una de las imágenes en el vídeo, solo de manera que no sea perceptible por el ojo humano. Para ser más precisos acerca de cómo funciona DCT, DCT altera los valores de ciertas partes de las imágenes, por lo general las redondea. Por ejemplo, si parte de una imagen tiene un valor de 6,667, lo aproxima hasta 7.
+
+Esteganografía en vídeo es similar a la aplicada en las imágenes, además de que la información está oculta en cada fotograma de vídeo. Cuando solo una pequeña cantidad de información que está oculta dentro del código fuente por lo general no es perceptible a todos. Sin embargo, cuanta mayor información se oculte, más perceptible será.
+En archivos de cualquier tipo
+
+Uno de los métodos más fáciles de implementar es el de inyección o agregado de bytes al final del archivo. Esta técnica consiste, esencialmente, en agregar o adosar al final de un archivo, de cualquier tipo, otro archivo que será el contenedor del "mensaje a ocultar", también de cualquier tipo. Esta metodología es la más versátil, pues permite usar cualquier tipo de archivo como portador (documentos, imágenes, audio, vídeos, ejecutables, etc) y añadir al final del archivo contenedor el "paquete enviado", que es otro archivo, también de cualquier tipo.
+
+Esta es una técnica que no se vale de las limitaciones humanas (vista y oído) para implementar la estrategia esteganográfica, sino que se vale de la forma de funcionamiento de la aplicaciones software que utilizan el portador. No degradan el contenido del portador de ninguna forma, por ejemplo, si es una imagen, permanecerá intacta; ya que el "mensaje" se le inyecta o adosa al final de la misma y la aplicación usada para visualizarla la mostrará normalmente hasta donde ella finalice. Esto es debido que todo tipo de archivo, en su cabecera, entre otros, contiene ciertos bytes fijos (en cantidad y ubicación) usados exclusivamente para indicar el tamaño del archivo. La aplicación que utilice un archivo, de cualquier tipo, siempre lee su cabecera primero, adquiere ese valor como su tamaño (en cantidad de bytes) y seguidamente lee el resto del archivo hasta el final indicado por dicho valor. De modo que si se coloca algo (mensaje) más allá del valor de ese parámetro, no será leído por la aplicación normal, por tanto no detectado, y el archivo portador funcionará normalmente.
+
+Si bien es la técnica más sencilla de implementar, y de uso muy difundido, tiene la gran desventaja que provoca crecimiento del portador, tanto como el tamaño de su mensaje, siendo por tanto una estrategia fácilmente detectable. Un sencillo programa de estegoanálisis lo detecta por la sola lectura de su cabecera y la comprobación del tamaño real de archivo portador; incluso cualquier usuario desconfiado puede muchas veces sospechar del portador por su tamaño ocupado en disco en relación a su contenido. Otra desventaja, aunque muy relativa y eventual, es que el crecimiento del portador podría ser limitante a la hora de trasferirlo por las redes, particularmente por Internet.
+
+Los programas o software que utilizan esta técnica son llamados joiners, básicamente unen dos archivos, el portador y el de mensaje, manteniendo el valor inicial del tamaño en bytes indicado en la cabecera del primero. Esta es una técnica no utilizada si se pretende obtener características de indetectabilidad.
+
+Si no se requiere reunir requisitos de indetectabilidad, es uno de los métodos preferidos por su sencillez, flexibilidad y escasas limitaciones. Prácticamente cualquier tipo de portador es admitido, con o sin compresión, incluso módulos ejecutables. En algunos casos provoca corrupción del portador, lo cual no es gran problema: practicada la técnica e inyectado el mensaje se prueba el portador con su aplicación correspondiente, si se ha degradado y/o no funciona bien, sencillamente toma otro, del mismo u otro tipo y se repite la operación.
+Otros
+
+Una nueva técnica esteganográfica implica el inyectar retardos (conocidos por su traducción al inglés como "delays") imperceptibles a los paquetes enviados sobre la red desde el teclado. Los retardos en el tecleo de los comandos en algunos usos (telnet o software de escritorio remoto) pueden significar un retardo en paquetes, y los retardos en los paquetes se pueden utilizar para codificar datos.
+Estegoanálisis
+
+Lo que la esteganografía esencialmente hace es explotar las limitaciones de la percepción humana (excepto en el método de inyección), ya que los sentidos humanos (vista y oído) tienen límites para percibir información extraña intercalada en su contenido; pero existen aplicaciones software disponibles que pueden hacer ese trabajo de detección, por diversas técnicas analíticas, al estudio y aplicación de ellas corresponde lo denominado estegoanálisis.
+
+Mientras que con la esteganografía se intenta estudiar e implementar métodos para enviar mensajes encubiertos en portadores de apariencia inocua o normal, con el estegoanálisis se estudian las formas de detectar la presencia de mensajes ocultos en potenciales portadores (no necesariamente de extraerlos).
+
+Debido a que la esteganografía es invasiva, es decir, deja huellas en el medio de transporte utilizado, las técnicas de estegoanálisis intentan detectar estos cambios, usando incluso complejos mecanismos estadísticos. Las técnicas de estegoanálisis, normalmente, hasta el momento, solo llegan a brindar nivel de probabilidad de existencia de un mensaje encubierto en un portador. 
+
+== Pandemia covid 2019 ==
+
+La pandemia de COVID-19 es una pandemia derivada de la enfermedad por coronavirus 2019 (COVID-19), ocasionada por el virus SARS-CoV-2 (coronavirus del síndrome respiratorio agudo grave tipo 2).5​6​ Se identificó por primera vez en diciembre de 2019 en la ciudad de Wuhan,7​ capital de la provincia de Hubei, en la República Popular China, al reportarse casos de un grupo de personas enfermas con un tipo de neumonía desconocida. La mayoría de individuos afectados tenían vinculación con trabajadores del Mercado Mayorista de Mariscos del Sur de China de Wuhan.8​ La Organización Mundial de la Salud (OMS) la reconoció como una pandemia el 11 de marzo de 2020.9​
+
+Hasta el 26 de enero de 2021, se ha informado de más de 100.8 millones de casos de la enfermedad en 255 países y territorios en el mundo. Por otra parte, para octubre de 2020, la Organización Mundial de la Salud estimaba que al menos un 10 % de la población mundial ya se ha contagiado de esta enfermedad (unas 780 millones de personas infectados aproximadamente), debido al gran subregistro de casos a nivel mundial.10​11​
+
+El virus se transmite generalmente de persona a persona a través de las pequeñas gotas de saliva, conocidas como microgotas de Flügge, que se emiten al hablar, estornudar, toser o respirar.12​13​14​ Se difunde principalmente cuando las personas están en contacto cercano, pero también se puede difundir al tocar una superficie contaminada y luego llevar las manos contaminadas a la cara o las mucosas. Su período de incubación suele ser de cinco días, pero puede variar de dos a catorce días.15​16​ Los síntomas más comunes son la fiebre, la tos seca y dificultades para respirar.15​ Las complicaciones pueden incluir la neumonía, el síndrome respiratorio agudo o la sepsis.17​18​19​ Pese a haber numerosas vacunas en desarrollo, todavía no existe una o tratamiento antivírico específico,13​ por lo que actualmente la única forma de abordaje del mal es a través de la terapia sintomática y de apoyo.20​
+
+Las medidas de prevención recomendadas incluyen lavarse las manos, cubrirse la boca al toser, el distanciamiento físico entre las personas y el uso de mascarillas, además del autoaislamiento y el seguimiento para las personas sospechosas de estar infectadas.13​ Las personas de la tercera edad y las que tienen padecimientos como la diabetes, cardiopatías, enfermedades respiratorias, hipertensión arterial o inmunodeficiencias tienen un riesgo mucho mayor de contraer la enfermedad y de llegar a tener complicaciones graves, por lo que se sugiere quedarse en casa tanto como sea posible.21​
+
+Asimismo, se ha confirmado que otros animales —como perros, gatos, tigres, leones y murciélagos— pueden contraer el COVID-19 al igual que los seres humanos. Aún está en estudio si los animales también deberían tomar las mismas medidas de distanciamiento que los seres humanos para evitar su propagación.22​23​ Para evitar la expansión del virus, los gobiernos han impuesto restricciones de viajes, cuarentenas, confinamientos, cancelación de eventos y el cierre de establecimientos.
+
+La pandemia ha tenido un efecto socioeconómico disruptivo.24​ Se han cerrado colegios y universidades en más de 124 países, lo que ha afectado a más de 2200 millones de estudiantes.25​ Un tercio de la población mundial se encuentra confinada, con fuertes restricciones a la libertad de circulación,26​ lo cual ha conducido a una reducción drástica de la actividad económica27​ y a un aumento paralelo del desempleo.28​ Se han desatado maniobras de desinformación y teorías conspirativas sobre el virus,29​30​ así como algunos incidentes de xenofobia y racismo contra ciudadanos chinos y de otros países del este y sudeste asiático.31​ Debido a la reducción de los viajes y al cierre de numerosas empresas, ha habido un descenso en la contaminación atmosférica.32​33
+
+Enfermedad
+Esta sección es un extracto de COVID-19[editar]
+Síntomas34​
+
+El o la COVID-19 nota 2​ (Acerca de este sonido pronunciación (?·i); acrónimo del inglés coronavirus disease 2019),37​ covid-19 o covid, conocida en español como enfermedad por coronavirus 2019 e incorrectamente como neumonía por coronavirus,nota 3​ es una enfermedad infecciosa causada por el virus SARS-CoV-2.42​43​
+
+Produce síntomas similares a los de la gripe o catarro, entre los que se incluyen fiebre, tos,44​ disnea, mialgia y fatiga.45​46​ En casos graves se caracteriza por producir neumonía, síndrome de dificultad respiratoria aguda,47​ sepsis48​ y choque séptico que conduce a cerca de 3,75 % de los infectados a la muerte según la OMS.49​ No existe tratamiento específico; las medidas terapéuticas principales consisten en aliviar los síntomas y mantener las funciones vitales.45​
+
+La transmisión del SARS-CoV-2 se produce mediante pequeñas gotas —microgotas de Flügge50​— que se emiten al hablar, estornudar, toser o espirar, que al ser despedidas por un portador (que puede no tener síntomas de la enfermedad o estar incubándola)51​ pasan directamente a otra persona mediante la inhalación, o quedan sobre los objetos y superficies que rodean al emisor, y luego, a través de las manos, que lo recogen del ambiente contaminado, toman contacto con las membranas mucosas orales, nasales y oculares, al tocarse la boca, la nariz o los ojos.52​53​ Esta última es la principal vía de propagación, ya que el virus puede permanecer viable hasta por días en los fómites (cualquier objeto carente de vida, o sustancia, que si se contamina con algún patógeno es capaz de transferirlo de un individuo a otro).51​
+
+Los síntomas aparecen entre dos y catorce días, con un promedio de cinco días, después de la exposición al virus.54​55​56​57​ Existe evidencia limitada que sugiere que el virus podría transmitirse uno o dos días antes de que se tengan síntomas, ya que la viremia alcanza un pico al final del período de incubación.58​59​ El contagio se puede prevenir con el lavado de manos frecuente, o en su defecto la desinfección de las mismas con alcohol en gel, cubriendo la boca al toser o estornudar, ya sea con la sangradura (parte hundida del brazo opuesta al codo) o con un pañuelo y evitando el contacto cercano con otras personas,52​ entre otras medidas profilácticas, como el uso de mascarillas. La OMS desaconsejaba en marzo la utilización de máscara quirúrgica por la población sana,60​61​ en abril la OMS consideró que era una medida aceptable en algunos países.62​
+No obstante, ciertos expertos recomiendan el uso de máscaras quirúrgicas basados en estudios sobre la Influenza H1N1, donde muestran que podrían ayudar a reducir la exposición al virus.63​ Los CDC de Estados Unidos recomiendan el uso de mascarillas de tela, no médicas.64​
+Antecedentes
+
+Desde décadas antes de 2020, varios científicos, autores y figuras mediáticas advertían sobre la posible aparición de un virus con capacidad de generar una pandemia que tuviera consecuencias devastadoras para el mundo. Exitosos libros como A Dancing Matrix (1994) de Robin Marantz Henig, The Coming Plague (1994) de Laurie Garrett y The Hot Zone de Richard Preston (1995) tocaron este tema y coincidieron en que mundialmente no existía la preparación suficiente para lidiar con algo así.65​
+
+En el siglo xxi las advertencias continuaron, y aunque durante ese tiempo surgió la pandemia de gripe A (H1N1) de 2009-2010, muchos autores y expertos continuaron centrando su preocupación en la aparición de una pandemia similar a la pandemia de gripe de 1918, que ha sido la más letal desde el siglo xx. Mientras que, por otro lado, la de 2009-2011 fue la menos letal de ellas, con un número de contagios y muertes estimadas que coincidieron en buena parte con los que una gripe estacional puede causar anualmente, y con un nulo impacto social e económico a nivel mundial. Algunos de los expertos que advirtieron sobre una posible pandemia fueron:66​
+
+    El científico Vaclav Smil: escribió en su libro Global Catastrophes and Trends (2008) que «la posibilidad de una pandemia de influenza durante los próximos 50 años es virtualmente del 100 %».
+    El científico David Quammen: habló en su libro Spillover (2013) que el siguiente «cataclismo» provocado por una pandemia similar a las de 1918 sería más probablemente debido a un virus de origen animal.67​
+    El virólogo y experto en influenza Robert Webster: dijo en su libro Flu Hunter: Unlocking the secrets of a virus (2019) que «una pandemia mortal y disruptiva» era «solo cuestión de tiempo», y que «la naturaleza eventualmente va a desafiar de nuevo a la humanidad con un equivalente al virus de la influenza de 1918».
+    Jeremy Konyndyk, exdirector de la Oficina de USAID de Asistencia para Desastres Externos de Estados Unidos: escribió en un artículo de 2017 que «una nueva gran crisis sanitaria global es una cuestión de 'cuándo', no de 'si'», y añadió que el virus sería comparable al de la pandemia de 1918.
+
+Otra de las advertencias, que se popularizó durante la actual pandemia, fue la charla TED que dio Bill Gates en 2015, donde habló sobre la falta de políticas de preparación ante una posible pandemia causada por algún virus altamente infeccioso y bajo circunstancias que alienten su diseminación; y una vez más, presentó un modelo de los contagios que provocaría un virus como el de 1918.68​ Según dijo Bill Gates, para un reportaje a The Wall Street Journal, también instó a los candidatos presidenciales de las elecciones de Estados Unidos de 2016 a priorizar esfuerzos en preparativos ante una posible pandemia.66​
+
+Durante la actual pandemia también cobraron notoriedad obras que trataron temas relacionados con epidemias, especialmente la película Contagion (2011),69​ basada en eventos como la pandemia de 2009 y la epidemia de SARS de 2002-2004, y que fue bien recibida por la comunidad científica por su cercanía con la realidad; o la novela The Eyes of Darkness (1981), donde se relata la creación de un virus con 100 % de letalidad, llamado «Wuhan-400» en algunas ediciones de este libro.70​
+Origen de la pandemia
+Brote epidémico en Wuhan
+Esta sección es un extracto de Pandemia de COVID-19 en República Popular China § Inicio de la pandemia[editar]
+
+Los hospitales de Wuhan detectaron los primeros casos de la nueva enfermedad a principios de diciembre de 2019, y según la información oficial, estos primeros contagios se dieron en el ámbito del Mercado Mayorista de Mariscos del Sur de China de Wuhan.71​
+
+Estos primeros casos, diagnosticados en un principio como una neumonía de origen desconocido, fueron los que iniciaron las alertas sanitarias que llevaron a que en la primera semana de enero se identificase como causante de la enfermedad desconocida a un nuevo coronavirus, al que se denominó al principio 2019-nCoV.
+Los coronavirus circulan principalmente entre animales, pero han evolucionado e infectado a los humanos (convirtiéndolos así en virus zoonóticos), como se ha visto en el SARS, el MERS y otros cuatro tipos de coronavirus encontrados en humanos que causan síntomas respiratorios similares a los del resfriado común. Los seis tipos de coronavirus conocidos hasta ahora se pueden contagiar de humano a humano.72​73​
+Propagación internacional de la enfermedad
+Esta sección es un extracto de Pandemia de COVID-19 en República Popular China § Primeros casos fuera de Wuhan[editar]
+
+Ya en diciembre la enfermedad se había extendido en silencio a Europa, en concreto a París 74​ Milán y Turín,75​ pero sin ser descubierta hasta estudios muy posteriores.
+
+La alerta de la Organización Mundial de la Salud, aun sin conocerse todavía si era posible el contagio de persona a persona, hizo que se dispararan las alarmas en otros países asiáticos en los que en 2003 sufrieron el brote de SARS. Regiones y países cercanos a China pusieron en marcha los escaneos por infrarrojos a viajeros.76​
+
+El 13 de enero la OMS informó sobre el entonces primer caso confirmado fuera de China. Una mujer china de 61 años vecina de Wuhan que el 8 de enero viajó en vuelo directo de Wuhan a Tailandia en compañía de cinco miembros de su familia en un grupo de 16 personas. Fue detectada en el aeropuerto de Suvarnabhumi (BKK) al presentar fiebre alta. Hospitalizada, el 12 de enero dio «positivo por coronavirus por reacción en cadena de la transcriptasa-polimerasa inversa (RT-PCR)». «Informó de que había visitado regularmente un mercado local de productos frescos en Wuhan antes de la aparición de la enfermedad el 5 de enero de 2020; sin embargo, no informó de que hubiera visitado el Mercado Mayorista de Mariscos del Sur de China, donde se detectaron la mayoría de los casos».77​78​
+La Comisión Nacional de Salud de China confirmó el 20 de enero de 2020 que el nuevo coronavirus se transmitía entre humanos.79​ Al mismo tiempo, empezaron a darse casos de la enfermedad entre personal sanitario y el virus saltó a Corea del Sur.80​ La OMS advirtió de que podría originarse una epidemia internacional,81​ temor que se incrementó por la cercanía de las celebraciones del Año Nuevo Chino, durante las cuales muchos millones de personas se desplazan de una provincia a otra.82​
+Declaración de pandemia
+
+La Organización Mundial de la Salud declaró el 30 de enero de 2020, la existencia de un riesgo de salud pública de interés internacional, bajo las regulaciones del Reglamento Sanitario Internacional,83​84​85​ y posteriormente el 11 de marzo de 2020 que la enfermedad se consideraba ya una pandemia por la alta cantidad de personas infectadas (118 000) y muertes (4291) que había causado alrededor del mundo (114 países).3​86​
+Véase también: Anexo:Cronología de la pandemia de COVID-19
+Incidencia
+Véase también: Curva epidemiológica
+
+En relación con la incidencia, los casos de covid-19 comprobados mediante análisis genético (PCR) ascienden a unos 100.8 millones al 26 de enero de 2021, pero la OMS estima que la cantidad real de infecciones es probablemente mucho mayor, en torno a 780 millones o 10 % de la población mundial.87​
+Representatividad de los datos
+
+Cada país está informando de los casos de COVID-19 verificados en su territorio en base al análisis genético de muestras en laboratorio. Sobre todo en los primeros meses de la pandemia, estas cifras no eran necesariamente representativas de la propagación real del virus porque la cantidad de pruebas de Covid realizadas variaba mucho de un país a otro, según los medios disponibles y las estrategias de contención adoptadas.[cita requerida]
+
+Durante los primeros de la pandemia, Corea del Sur fue el único país donde se realizaron análisis sistemáticos de grandes conjuntos de población, unos 10 000 al día, con 210 000 contabilizados hasta el 10 de marzo. En el extremo contrario, Japón solo había analizado 10 000 muestras en total hasta el 10 de marzo y el Reino Unido estaba haciendo 1500 análisis hasta el 11 de marzo, cuando su gobierno ordenó aumentar la cadencia un 500 %.88​ Estados Unidos había analizado solo 1583 muestras hasta el 5 de marzo.89​
+
+En España, a 25 de marzo de 2020 se calculaba que podría haber entre 300 000 y 900 000 infectados frente a los 39 000 casos registrados oficialmente. La importante diferencia se debe a que la mayoría de los portadores del virus pasan la enfermedad sin ningún tipo de síntomas.90​ En China no se reportan los pacientes asintomáticos como casos de COVID-19 incluso si dan positivo en la prueba.91​
+
+La situación cambió en los meses siguientes, a medida que cada país se fue equipando en sistemas de pruebas de covid, principalmente por PCR. Es posible que se pasase al extremo contrario, en el que los positivos reportados eran superiores a los casos reales de la enfermedad porque la excesiva sensibilidad de las pruebas PCR señala como positivos a personas que ya han pasado la enfermedad pero tienen aún en su cuerpo restos de ARN no viable, es decir, de virus muertos que ya no infectan.92​
+
+En cuanto a las cifras de fallecidos, los criterios son también dispares según los países. En Italia se cuentan como víctimas de la pandemia a los muertos que habían dado positivo pero no a muchos ancianos fallecidos en residencias sin haberles hecho la prueba;93​ mientras que en Bélgica se contabiliza en las cifras de fallecidos a todos los muertos en residencias con síntomas similares a los de COVID-19, aunque no se les hayan hecho tests.94​ En España se ha constatado que la sobremortalidad durante la epidemia es entre un 50 y un 70 % más alta que las cifras oficiales de fallecidos por COVID-19 verificados por prueba PCR.95​96​97​
+Número de casos registrados por PCR
+
+Nota: la lista puede presentar desactualizaciones respecto a las fuentes.
+Líneas resaltadas:      Sin casos activos.     Todos los pacientes se recuperaron.
+Casos registrados al 30 de enero de 2021 (UTC) Territorios soberanos, dependientes, no incorporados, autónomos, de ultramar y transporte internacional 	
+Casos
+	
+Fallecidos
+	
+Recuperados
+	
+Activos
+	Ref
+Totales 	CxMhab 	Totales 	% 	FxMhab 	Totales 	% 	Totales 	%
+255 territorios o transportes 	Continente / Océano 	100 836 681 	n/a 	2 167 092 	2,1 % 	n/a 	72 844 940 	72,2 % 	25 824 649 	25,6 %
+Bandera de Estados Unidos Estados Unidosnota 4​ 	América 	26 512 193 	79 853,6 	447 459 	1,7 % 	1347,7 	16 199 572 	61,1 % 	9 865 162 	37,2 % 	98​99​
+Bandera de India India 	Asia 	10 734 026 	7675,4 	154 184 	1,4 % 	110,2 	10 409 160 	97 % 	170 682 	1,6 % 	100​
+Bandera de Brasil Brasil 	América 	9 119 477 	42 746,2 	222 775 	2,4 % 	1044,2 	7 960 643 	87,3 % 	936 059 	10,3 % 	101​
+Bandera de Rusia Rusia nota 5​ 	Europa y Asia 	3 813 048 	25 983,3 	72 185 	1,9 % 	491,9 	3 255 462 	85,4 % 	485 401 	12,7 % 	102​
+Bandera de Reino Unido Reino Unido nota 6​ 	Europa 	3 772 813 	55 425,5 	104 371 	2,8 % 	1533,3 	1 673 936 	44,4 % 	1 994 506 	52,9 % 	103​
+Bandera de Francia Francia nota 7​ 	Europa 	3 153 487 	48 262,7 	75 620 	2,4 % 	1157,3 	223 174 	7,1 % 	2 854 693 	90,5 % 	104​
+Bandera de España España nota 8​ 	Europa 	2 743 119 	58 129,2 	58 319 	2,1 % 	1235,8 	s/dnota 9​ 		s/dnota 9​ 		105​
+Bandera de Italia Italia 	Europa 	2 529 070 	41 865,1 	87 858 	3,5 % 	1454,4 	1 973 388 	78 % 	467 824 	18,5 % 	106​
+Bandera de Turquía Turquía 	Europa y Asia 	2 464 030 	29 053,5 	25 736 	1 % 	303,5 	2 348 309 	95,3 % 	89 985 	3,7 % 	107​
+Bandera de Alemania Alemania 	Europa 	2 207 393 	26 303,5 	57 052 	2,6 % 	679,8 	1 898 900 	86 % 	251 441 	11,4 % 	108​
+Bandera de Colombia Colombia 	América 	2 077 633 	40 610,5 	53 284 	2,6 % 	1041,5 	1 909 791 	91,9 % 	114 558 	5,5 % 	109​
+Bandera de Argentina Argentina nota 10​ 	América 	1 915 362 	42 179,3 	47 775 	2,5 % 	1052,1 	1 703 459 	88,9 % 	164 128 	8,6 % 	111​112​
+Bandera de México México 	América 	1 841 893 	14 208,8 	156 579 	8,5 % 	1207,9 	1 390 906 	75,5 % 	294 408 	16 % 	113​
+Bandera de Polonia Polonia 	Europa 	1 502 810 	39 145,9 	36 780 	2,4 % 	958,1 	1 257 352 	83,7 % 	208 678 	13,9 % 	114​
+Bandera de Sudáfrica Sudáfrica 	África 	1 443 939 	24 190,6 	43 633 	3 % 	731 	1 284 781 	89 % 	115 525 	8 % 	115​
+Bandera de Irán Irán 	Asia 	1 405 414 	16 622,3 	57 807 	4,1 % 	683,7 	1 196 374 	85,1 % 	151 233 	10,8 % 	116​
+Bandera de Ucrania Ucranianota 11​ 	Europa 	1 211 593 	27 795,2 	22 479 	1,9 % 	515,7 	1 003 341 	82,8 % 	185 773 	15,3 % 	117​
+Bandera de Perú Perú 	América 	1 125 875 	33 901,7 	40 686 	3,6 % 	1225,1 	1 039 619 	92,3 % 	45 570 	4 % 	118​
+Bandera de Indonesia Indonesianota 12​ 	Asia 	1 051 795 	3824,3 	29 518 	2,8 % 	107,3 	852 260 	81 % 	170 017 	16,2 % 	119​
+Bandera de República Checa República Checa 	Europa 	972 642 	90 816,2 	16 072 	1,7 % 	1500,7 	859 601 	88,4 % 	96 969 	10 % 	120​
+Bandera de los Países Bajos Países Bajosnota 13​ 	Europa 	970 602 	55 845,9 	13 872 	1,4 % 	798,2 	s/dnota 9​ 		s/d121​ 		122​123​
+Bandera de Canadá Canadá 	América 	770 793 	20 332,2 	19 801 	2,6 % 	522,3 	695 679 	90,3 % 	55 313 	7,2 % 	124​99​125​
+Bandera de Rumania Rumania 	Europa 	724 250 	37 800,1 	18 196 	2,5 % 	949,7 	669 175 	92,4 % 	36 879 	5,1 % 	126​
+Bandera de Chile Chile nota 14​ 	América 	718 749 	37 434,8 	18 257 	2,5 % 	950,9 	673 582 	93,7 % 	26 910 	3,7 % 	127​
+Bandera de Portugal Portugalnota 15​ 	Europa 	711 018 	69 098 	12 179 	1,7 % 	1183,6 	518 900 	73 % 	179 939 	25,3 % 	128​
+Bandera de Bélgica Bélgica 	Europa 	705 120 	60 733,9 	21 018 	3 % 	1810,3 	48 708 	6,9 % 	635 394 	90,1 % 	129​
+Bandera de Israel Israel 	Asia 	633 991 	68 987,1 	4700 	0,7 % 	511,4 	558 249 	88,1 % 	71 042 	11,2 % 	130​
+Bandera de Irak Irak 	Asia 	618 147 	15 195,4 	13 036 	2,1 % 	320,5 	589 540 	95,4 % 	15 571 	2,5 % 	131​
+Bandera de Suecia Suecia 	Europa 	566 957 	54 937,7 	11 591 	2 % 	1123,2 	s/dnota 9​ 		s/dnota 9​ 		132​133​
+Bandera de Pakistán Pakistán 	Asia 	543 214 	2434,7 	11 623 	2,1 % 	52,1 	498 152 	91,7 % 	33 439 	6,2 % 	134​
+Bandera de Bangladés Bangladés 	Asia 	534 407 	2970,6 	8094 	1,5 % 	45 	478 960 	89,6 % 	47 353 	8,9 % 	135​
+Bandera de Filipinas Filipinas 	Asia 	521 413 	4725,5 	10 600 	2 % 	96,1 	475 765 	91,2 % 	35 048 	6,7 % 	136​
+Bandera de Suiza Suiza 	Europa 	521 320 	60 059,9 	9354 	1,8 % 	1077,6 	317 600 	60,9 % 	194 366 	37,3 % 	137​
+Bandera de Marruecos Marruecosnota 16​ 	África 	469 990 	12 658 	8246 	1,8 % 	222,1 	447 866 	95,3 % 	13 878 	3 % 	138​
+Bandera de Austria Austria 	Europa 	411 730 	45 595,8 	7658 	1,9 % 	848,1 	389 476 	94,6 % 	14 596 	3,5 % 	139​
+Bandera de Serbia Serbianota 17​ 	Europa 	392 354 	45 046,4 	3983 	1 % 	457,3 	31 536 	8 % 	356 835 	90,9 % 	140​
+Bandera de Japón Japón 	Asia 	379 516 	3005,6 	5452 	1,4 % 	43,2 	320 248 	84,4 % 	53 816 	14,2 % 	141​
+Bandera de Arabia Saudita Arabia Saudita 	Asia 	367 543 	10 474,3 	6368 	1,7 % 	181,5 	359 006 	97,7 % 	2169 	0,6 % 	142​
+Bandera de Hungría Hungría 	Europa 	364 909 	37 388,2 	12 374 	3,4 % 	1267,8 	254 783 	69,8 % 	97 752 	26,8 % 	143​
+Bandera de Jordania Jordania 	Asia 	325 033 	30 348,6 	4281 	1,3 % 	399,7 	312 594 	96,2 % 	8158 	2,5 % 	144​
+Bandera de Panamá Panamá 	América 	318 253 	73 161,6 	5221 	1,6 % 	1200,2 	272 180 	85,5 % 	40 852 	12,8 % 	145​
+Bandera de Emiratos Árabes Unidos Emiratos Árabes Unidos 	Asia 	297 014 	29 850,7 	826 	0,3 % 	83 	269 999 	90,9 % 	26 189 	8,8 % 	146​
+Bandera de Líbano Líbano 	Asia 	296 282 	43 443,1 	2680 	0,9 % 	393 	175 397 	59,2 % 	118 205 	39,9 % 	147​
+Bandera de Nepal Nepal 	Asia 	270 745 	9082,4 	2025 	0,7 % 	67,9 	265 698 	98,1 % 	3022 	1,1 % 	148​149​
+Bandera de Georgia Georgianota 18​ 	Asia 	256 956 	64 561,8 	3148 	1,2 % 	791 	247 096 	96,2 % 	6712 	2,6 % 	150​
+Bandera de Ecuador Ecuador 	América 	246 687 	13 874,4 	14 802 	6 % 	832,5 	204 071 	82,7 % 	27 814 	11,3 % 	151​
+Bandera de Eslovaquia Eslovaquia 	Europa 	246 008 	45 056,4 	4495 	1,8 % 	823,3 	208 406 	84,7 % 	33 107 	13,5 % 	152​
+Bandera de Bielorrusia Bielorrusia 	Europa 	244 718 	25 923,5 	1698 	0,7 % 	179,9 	231 399 	94,6 % 	11 621 	4,7 % 	153​
+Bandera de Croacia Croacia 	Europa 	231 539 	56 335,5 	4972 	2,1 % 	1209,7 	223 450 	96,5 % 	3117 	1,3 % 	154​
+Bandera de Azerbaiyán Azerbaiyán 	Asia 	229 935 	22 586,9 	3119 	1,4 % 	306,4 	222 553 	96,8 % 	4263 	1,9 % 	155​
+Bandera de Bulgaria Bulgaria 	Europa 	218 269 	31 405,6 	9008 	4,1 % 	1296,1 	184 249 	84,4 % 	25 012 	11,5 % 	156​
+Bandera de Bolivia Bolivia 	América 	213 392 	18 161 	10 279 	4,8 % 	874,8 	157 263 	73,7 % 	45 850 	21,5 % 	157​
+Bandera de la República Dominicana República Dominicana 	América 	210 412 	19 303,9 	2626 	1,2 % 	240,9 	154 145 	73,3 % 	53 641 	25,5 % 	158​
+Bandera de Túnez Túnez 	África 	206 030 	17 342,6 	6599 	3,2 % 	555,5 	154 455 	75 % 	44 976 	21,8 % 	159​
+Bandera de Malasia Malasia 	Asia 	203 933 	6449,5 	733 	0,4 % 	23,2 	157 722 	77,3 % 	45 478 	22,3 % 	160​
+Bandera de Dinamarca Dinamarcanota 19​ 	Europa 	197 664 	33 962,9 	2084 	1,1 % 	358,1 	185 769 	94 % 	9811 	5 % 	161​
+Bandera de Irlanda Irlanda 	Europa 	193 892 	40 143,3 	3214 	1,7 % 	665,4 	23 364 	12,1 % 	167 314 	86,3 % 	162​
+Bandera de Costa Rica Costa Rica 	América 	193 276 	37 823,1 	2604 	1,3 % 	509,6 	151 952 	78,6 % 	38 720 	20 % 	163​
+Bandera de Kazajistán Kazajistán 	Asia 	185 369 	9813,1 	2476 	1,3 % 	131,1 	167 047 	90,1 % 	15 846 	8,5 % 	164​
+Bandera de Lituania Lituania 	Europa 	181 028 	64 884,6 	2762 	1,5 % 	990 	126 548 	69,9 % 	51 718 	28,6 % 	165​
+Bandera de Armenia Armenia 	Asia 	166 728 	56 327 	3069 	1,8 % 	1036,8 	156 910 	94,1 % 	6749 	4 % 	166​
+Bandera de Egipto Egipto 	África 	164 871 	1595,6 	9217 	5,6 % 	89,2 	128 800 	78,1 % 	26 854 	16,3 % 	167​
+Bandera de Eslovenia Eslovenia 	Europa 	164 529 	78 722 	3468 	2,1 % 	1659,3 	143 610 	87,3 % 	17 451 	10,6 % 	168​
+Bandera de Kuwait Kuwait 	Asia 	164 108 	36 549,7 	958 	0,6 % 	213,4 	156 903 	95,6 % 	6247 	3,8 % 	169​
+Bandera de Moldavia Moldavianota 20​ 	Europa 	158 860 	39 517,4 	3424 	2,2 % 	851,7 	149 026 	93,8 % 	6410 	4 % 	170​
+Bandera de Guatemala Guatemala 	América 	158 336 	9464,2 	5582 	3,5 % 	333,7 	143 065 	90,4 % 	9689 	6,1 % 	171​
+Bandera de Palestina Palestina(ERL) 	Asia 	158 168 	31 382,5 	1823 	1,2 % 	361,7 	148 140 	93,7 % 	8205 	5,2 % 	172​
+Bandera de Grecia Grecia 	Europa 	155 678 	14 522,2 	5764 	3,7 % 	537,7 	142 843 	91,8 % 	7071 	4,5 % 	173​
+Bandera de Catar Catar 	Asia 	150 621 	53 601,8 	248 	0,2 % 	88,3 	145 556 	96,6 % 	4817 	3,2 % 	174​
+Bandera de Honduras Honduras 	América 	146 110 	15 829,9 	3575 	2,4 % 	387,3 	60 821 	41,6 % 	81 714 	55,9 % 	175​
+Bandera de Birmania Birmania 	Asia 	139 515 	2552,4 	3115 	2,2 % 	57 	124 064 	88,9 % 	12 336 	8,8 % 	176​
+Bandera de Etiopía Etiopía 	África 	136 365 	1366,8 	2087 	1,5 % 	20,9 	121 987 	89,5 % 	12 291 	9 % 	177​
+Bandera de Omán Omán 	Asia 	133 728 	28 697 	1527 	1,1 % 	327,7 	126 572 	94,6 % 	5629 	4,2 % 	178​
+Bandera de Paraguay Paraguay 	América 	131 886 	18 317,5 	2693 	2 % 	374 	106 883 	81 % 	22 310 	16,9 % 	179​
+Bandera de Nigeria Nigeria 	África 	128 674 	595 	1577 	1,2 % 	7,3 	102 780 	79,9 % 	24 317 	18,9 % 	180​
+Bandera de Venezuela Venezuela 	América 	125 776 	3879,6 	1177 	0,9 % 	36,3 	117 867 	93,7 % 	6732 	5,4 % 	181​
+Bandera de Bosnia y Herzegovina Bosnia y Herzegovina 	Europa 	121 497 	36 929,2 	4679 	3,9 % 	1422,2 	94 604 	77,9 % 	22 214 	18,3 % 	182​
+Bandera de Libia Libia 	África 	117 650 	17 125,2 	1842 	1,6 % 	268,1 	97 357 	82,8 % 	18 451 	15,7 % 	183​
+Bandera de Argelia Argelia 	África 	106 887 	2439,2 	2884 	2,7 % 	65,8 	72 956 	68,3 % 	31 047 	29 % 	184​
+Bandera de Baréin Baréin 	Asia 	101 971 	64 538,6 	372 	0,4 % 	235,4 	97 948 	96,1 % 	3651 	3,6 % 	185​
+Bandera de Kenia Kenia 	África 	100 563 	2099,9 	1753 	1,7 % 	36,6 	83 821 	83,4 % 	14 989 	14,9 % 	186​
+Bandera de Macedonia del Norte Macedonia del Norte 	Europa 	92 193 	44 323,6 	2841 	3,1 % 	1365,9 	80 837 	87,7 % 	8515 	9,2 % 	187​
+Bandera de República Popular China Chinanota 21​188​ 	Asia 	89 430 	63,7 	4636 	5,2 % 	3,3 	83 083 	92,9 % 	1711 	1,9 % 	189​
+Bandera de Puerto Rico Puerto Rico(U) 	América 	86 302 	27 053,9 	1812 	2,1 % 	568 	s/dnota 9​ 		s/dnota 9​ 		190​
+Bandera de Kirguistán Kirguistán 	Asia 	84 377 	12 941,3 	1409 	1,7 % 	216,1 	80 643 	95,6 % 	2325 	2,8 % 	191​
+Bandera de Uzbekistán Uzbekistán 	Asia 	78 602 	2306,4 	621 	0,8 % 	18,2 	77 084 	98,1 % 	897 	1,1 % 	192​
+Bandera de Corea del Sur Corea del Sur 	Asia 	77 850 	1505.2 	1414 	1.8 % 	27.3 	67 121 	86.2 % 	9315 	12 % 	193​
+Bandera de Albania Albania 	Europa 	76 350 	26 789,5 	1358 	1,8 % 	476,5 	46 420 	60,8 % 	28 572 	37,4 % 	194​
+Bandera de Letonia Letonia 	Europa 	64 923 	34 170 	1166 	1.8 % 	613.7 	53 131 	81.8 % 	10 626 	16.4 % 	195​
+Bandera de Ghana Ghana 	África 	63 883 	2086,3 	390 	0,6 % 	12,7 	59 553 	93,2 % 	3940 	6,2 % 	196​
+Bandera de Noruega Noruega 	Europa 	62 575 	11 631 	564 	0.9 % 	104.8 	57 004 	91.1 % 	5007 	8 % 	197​
+Bandera de Sri Lanka Sri Lanka 	Asia 	62 445 	2855.3 	305 	0.5 % 	13.9 	55 398 	88.7 % 	6742 	10.8 % 	198​199​
+Bandera de Montenegro Montenegro 	Europa 	60 827 	98 108,1 	800 	1.3 % 	1290.3 	52 574 	86.4 % 	7453 	12.3 % 	200​
+Bandera de Kosovo Kosovonota 22​(ERL) 	Europa 	59 646 	33 321,8 	1487 	2.5 % 	830.7 	51 948 	87.1 % 	6211 	10.4 % 	201​
+Bandera de Singapur Singapur 	Asia 	59 449 	10 375 	29 	0 % 	5,1 	59 181 	99,5 % 	239 	0,4 % 	202​203​
+Bandera de Afganistán Afganistán 	Asia 	55 008 	1687,9 	2400 	4,4 % 	73,6 	47 606 	86,5 % 	5002 	9,1 % 	204​
+Bandera de El Salvador El Salvador 	América 	53 989 	8010.2 	1604 	3 % 	238 	47 643 	88.2 % 	4742 	8.8 % 	205​
+Bandera de Zambia Zambia 	África 	51 624 	2816.4 	728 	1.4 % 	39.7 	44 133 	85.5 % 	6763 	13.1 % 	206​
+Bandera de Luxemburgo Luxemburgo 	Europa 	50 388 	81 271 	577 	1.1 % 	930.6 	47 615 	94.5 % 	2196 	4.4 % 	207​
+Bandera de Finlandia Finlandianota 23​ 	Europa 	44 402 	8029.3 	671 	1.5 % 	121.3 	31 000 	69.8 % 	12 731 	28.7 % 	208​
+Bandera de Estonia Estonia 	Europa 	43 343 	32 835,6 	409 	0.9 % 	309.8 	32 968 	76.1 % 	9966 	23 % 	209​
+Bandera de Uruguay Uruguay 	América 	40 529 	11 513,9 	425 	1 % 	120.7 	33 146 	81.8 % 	6958 	17.2 % 	210​
+Bandera de Uganda Uganda 	África 	39 490 	972.2 	324 	0.8 % 	8 	14 179 	35.9 % 	24 987 	63.3 % 	211​
+Bandera de Mozambique Mozambique 	África 	37 108 	1234.5 	356 	1 % 	11.8 	23 559 	63.5 % 	13 193 	35.6 % 	212​
+Bandera de Namibia Namibia 	África 	33 696 	13 587,1 	342 	1 % 	137.9 	31 652 	93.9 % 	1702 	5.1 % 	213​
+Bandera de Zimbabue Zimbabue 	África 	32 952 	2156.5 	1178 	3.6 % 	77.1 	24 872 	75.5 % 	6902 	20.9 % 	214​
+Bandera de Chipre Chiprenota 24​ 	Europa 	30 657 	34 837,5 	197 	0.6 % 	223.9 	2057 	6.7 % 	28 403 	92.6 % 	215​
+Bandera de Camerún Camerún 	África 	29 617 	1201.5 	462 	1.6 % 	18.7 	28 045 	94.7 % 	1110 	3.7 % 	216​
+Bandera de Transnistria Transnistria(ERL) 	Europa 	28 870 	61 425,5 	617 	2.1 % 	1312.8 	26 812 	92.9 % 	1441 	5 % 	217​
+Bandera de Australia Australia 	Oceanía 	28 806 	1171 	909 	3.2 % 	37.6 	26 045 	90.4 % 	1852 	6.4 % 	218​
+Bandera de Costa de Marfil Costa de Marfil 	África 	27 934 	1068.2 	152 	0.5 % 	5.8 	25 670 	91.9 % 	2112 	7.6 % 	219​
+Bandera de Sudán Sudán 	África 	26 899 	613.3 	1798 	6.7 % 	41 	21 155 	78.6 % 	3945 	14.7 % 	220​
+Bandera de Senegal Senegal 	África 	25 895 	1598.5 	617 	2.4 % 	38.1 	21 561 	83.3 % 	3717 	14.4 % 	221​
+Bandera de Cuba Cuba 	América 	24 764 	2211.1 	210 	0.8 % 	18.8 	19 613 	79.2 % 	4941 	20 % 	222​223​
+Bandera de Malaui Malaui 	África 	23 020 	1243.7 	643 	2.8 % 	34.7 	7815 	33.9 % 	14 562 	63.3 % 	224​
+Bandera de República Democrática del Congo República Democrática del Congo 	África 	22 455 	250.7 	665 	3 % 	7.4 	14 997 	66.8 % 	6793 	30.3 % 	225​
+Bandera de Botsuana Botsuana 	África 	21 293 	9022.5 	134 	0.6 % 	56.8 	17 198 	80.8 % 	3961 	18.6 % 	226​
+Bandera de Angola Angola 	África 	19 723 	633.8 	464 	2.4 % 	14.9 	17 918 	90.8 % 	1341 	6.8 % 	227​
+Bandera de Madagascar Madagascar 	África 	18 743 	695.2 	279 	1.5 % 	10.3 	17 930 	95.7 % 	534 	2.8 % 	228​
+Bandera de Polinesia Francesa Polinesia Francesa(U) 	Oceanía 	18 060 	66 888,9 	131 	0.7 % 	485.2 	4842 	26.8 % 	13 087 	72.5 % 	229​
+Bandera de Tailandia Tailandia 	Asia 	17 953 	260 	77 	0.4 % 	1.1 	11 505 	64.1 % 	6371 	35.5 % 	230​
+Bandera de la República Popular de Donetsk Donetsk(ERL) 	Europa 	17 905 	7784.8 	1584 	8.8 % 	688.7 	10 124 	56.5 % 	6197 	34.6 % 	231​
+Bandera de Malta Malta 	Europa 	17 585 	34 480,4 	264 	1.5 % 	517.6 	14 626 	83.2 % 	2695 	15.3 % 	232​
+Bandera de Mauritania Mauritania 	África 	16 576 	4023.3 	421 	2.5 % 	102.2 	15 596 	94.1 % 	559 	3.4 % 	233​
+Bandera de Guayana Francesa Guayana Francesa(U) 	América 	16 028 	53 426,7 	76 	0.5 % 	253.3 	9995 	62.4 % 	5957 	37.2 % 	234​
+Bandera de Maldivas Maldivas 	Asia 	15 614 	41 089,5 	51 	0.3 % 	134.2 	14 064 	90.1 % 	1499 	9.6 % 	235​
+Bandera de Suazilandia Suazilandia 	África 	15 471 	13 937,8 	551 	3.6 % 	496.4 	10 028 	64.8 % 	4892 	31.6 % 	236​
+Bandera de Jamaica Jamaica 	América 	15 462 	5663.7 	345 	2.2 % 	126.4 	11 981 	77.5 % 	3136 	20.3 % 	237​
+Bandera de Ruanda Ruanda 	África 	14 784 	1179.9 	188 	1.3 % 	15 	9519 	64.4 % 	5077 	34.3 % 	238​
+Bandera de Guinea Guinea 	África 	14 451 	1169.2 	82 	0.6 % 	6.6 	13 999 	96.9 % 	370 	2.6 % 	239​
+Bandera de Siria Siria 	Asia 	13 944 	796.3 	911 	6.5 % 	52 	7406 	53.1 % 	5627 	40.4 % 	240​
+Bandera de Cabo Verde Cabo Verde 	África 	13 897 	25 267,3 	131 	0.9 % 	238.2 	13 038 	93.8 % 	728 	5.2 % 	241​
+Bandera de Tayikistán Tayikistán 	Asia 	13 308 	1411.2 	90 	0.7 % 	9.5 	13 218 	99.3 % 	0 	0 % 	242​
+Bandera de Belice Belice 	América 	11 877 	28 968,3 	301 	2.5 % 	734.1 	11 294 	95.1 % 	282 	2.4 % 	243​
+Bandera de Haití Haití 	América 	11 460 	982.8 	245 	2.1 % 	21 	9061 	79.1 % 	2154 	18.8 % 	244​
+Bandera de Gabón Gabón 	África 	10 748 	4841.4 	68 	0.6 % 	30.6 	10 260 	95.5 % 	420 	3.9 % 	245​
+Flag of the Republic of Abkhazia.svg Abjasia(ERL) 	Asia 	10 486 	41 944 	152 	1.4 % 	608 	8190 	78.1 % 	2144 	20.4 % 	246​
+Bandera de Burkina Faso Burkina Faso 	África 	10 423 	491.4 	120 	1.2 % 	5.7 	8867 	85.1 % 	1436 	13.8 % 	247​
+Bandera de Hong Kong Hong Kong(RAE) 	Asia 	10 372 	1382.9 	177 	1.7 % 	23.6 	9302 	89.7 % 	893 	8.6 % 	248​
+Bandera de Reunión Reunión(U) 	África 	9996 	11 489,7 	46 	0.5 % 	52.9 	9518 	95.2 % 	432 	4.3 % 	249​
+Bandera de Andorra Andorra 	Europa 	9638 	123 564,1 	97 	1 % 	1243.6 	8774 	91 % 	767 	8 % 	250​
+Bandera de Guadalupe (Francia) Guadalupe(U) 	América 	9097 	227 425 	154 	1.7 % 	3850 	2242 	24.6 % 	6701 	73.7 % 	251​
+Bandera de Rojava Rojava(ERL) 	Asia 	8450 	1837 	289 	3.4 % 	62.8 	1202 	14.2 % 	6959 	82.4 % 	252​
+Bandera de Surinam Surinam 	América 	8174 	14 093,1 	150 	1.8 % 	750 	7377 	90.2 % 	647 	7.9 % 	253​
+Bandera de Bahamas Bahamas 	América 	8140 	20 871,8 	175 	2.1 % 	448.7 	6746 	82.9 % 	1219 	15 % 	254​
+Bandera de Lesoto Lesoto 	África 	8047 	3831.9 	146 	1.8 % 	69.5 	2398 	29.8 % 	5503 	68.4 % 	255​
+Bandera de Malí Malí 	África 	8006 	394.8 	327 	4.1 % 	16.1 	5731 	71.6 % 	1948 	24.3 % 	256​
+Bandera de República del Congo República del Congo 	África 	7887 	1449.8 	117 	1.5 % 	21.5 	5846 	74.1 % 	1924 	24.4 % 	257​
+Bandera de Mayotte Mayotte(U) 	África 	7590 	27 107,1 	59 	0.8 % 	210.7 	2964 	39.1 % 	4567 	60.2 % 	258​
+Bandera de Guam Guam(U) 	Oceanía 	7547 	44 394,1 	128 	1.7 % 	752.9 	7293 	96.6 % 	126 	1.7 % 	259​
+Bandera de Trinidad y Tobago Trinidad y Tobago 	América 	7496 	5511.8 	134 	1.8 % 	98.5 	7058 	94.2 % 	304 	4.1 % 	260​
+Bandera de Guyana Guyananota 25​ 	América 	7346 	9298.7 	172 	2.3 % 	217.7 	6455 	87.9 % 	719 	9.8 % 	261​
+Bandera de Aruba Aruba(U) 	América 	6768 	67 680 	57 	0.8 % 	570 	6349 	93.8 % 	362 	5.3 % 	262​
+Bandera de Martinica Martinica(U) 	América 	6402 	17 302,7 	45 	0.7 % 	121.6 	98 	1.5 % 	6259 	97.8 % 	263​
+Bandera de Nicaragua Nicaragua nota 26​ 	América 	6253 	953.2 	169 	2.7 % 	25.8 	4225 	67.6 % 	1859 	29.7 % 	264​
+Bandera de Islandia Islandia 	Europa 	5992 	16 644,4 	29 	0.5 % 	80.6 	5904 	98.5 % 	59 	1 % 	265​
+Bandera de Yibuti Yibuti 	África 	5923 	5433.9 	62 	1 % 	56.9 	5841 	98.6 % 	20 	0.3 % 	266​
+Bandera de Guinea Ecuatorial Guinea Ecuatorial 	África 	5454 	3814 	86 	1.6 % 	60.1 	5219 	95.7 % 	149 	2.7 % 	267​
+Bandera de la República Centroafricana República Centroafricana 	África 	4980 	895.7 	63 	1.3 % 	11.3 	4885 	98.1 % 	32 	0.6 % 	268​
+Bandera de Somalia Somalianota 27​ 	África 	4754 	299.2 	130 	2.7 % 	8.2 	3666 	77.1 % 	958 	20.2 % 	269​
+Bandera de Togo Togo 	África 	4682 	612.8 	76 	1.6 % 	9.9 	4005 	85.5 % 	601 	12.8 % 	270​
+Bandera de Curazao Curazao(U) 	América 	4558 	28 487,5 	20 	0.4 % 	125 	4442 	97.5 % 	96 	2.1 % 	271​
+Bandera de Niger Níger 	África 	4407 	193.7 	153 	3.5 % 	6.7 	3544 	80.4 % 	710 	16.1 % 	272​
+Bandera de Gibraltar Gibraltar(U) 	Europa 	4024 	121 939,4 	69 	1.7 % 	2090.9 	3401 	84.5 % 	554 	13.8 % 	273​
+Bandera de Gambia Gambia 	África 	4012 	1664.7 	128 	3.2 % 	53.1 	3753 	93.5 % 	131 	3.3 % 	274​
+Bandera de Sudán del Sur Sudán del Sur 	África 	3788 	285.2 	64 	1.7 % 	4.8 	3542 	93.5 % 	182 	4.8 % 	275​
+Bandera de Benín Benín 	África 	3643 	305.6 	48 	1.3 % 	4 	3317 	91.1 % 	278 	7.6 % 	276​
+Bandera de Jersey Jersey(U) 	Europa 	3127 	28 427,3 	63 	2 % 	572.7 	2930 	93.7 % 	134 	4.3 % 	277​
+Bandera de Chad Chad 	África 	3225 	201.9 	116 	3.6 % 	7.3 	2316 	71.8 % 	793 	24.6 % 	278​
+Bandera de Sierra Leona Sierra Leona 	África 	3194 	397.8 	77 	2.4 % 	9.6 	2232 	69.9 % 	885 	27.7 % 	279​
+Bandera de San Marino San Marino 	Europa 	2915 	85 735,3 	65 	2.2 % 	1911.8 	2660 	91.3 % 	190 	6.5 % 	280​
+Bandera de Osetia del Sur Osetia del Sur(ERL) 	Asia 	2587 	47 907,4 	60 	2.3 % 	1111.1 	1729 	66.8 % 	798 	30.8 % 	281​
+Bandera de Guinea-Bisáu Guinea-Bisáu 	África 	2532 	1563 	45 	1.8 % 	27.8 	2421 	95.6 % 	66 	2.6 % 	282​
+Bandera de Liechtenstein Liechtenstein 	Europa 	2455 	62 948,7 	52 	2.1 % 	1333.3 	2322 	94.6 % 	81 	3.3 % 	283​
+Bandera de Comoras Comoras 	África 	2425 	2724.7 	77 	3.2 % 	86.5 	1441 	59.4 % 	907 	37.4 % 	284​
+Bandera de la República Popular de Lugansk Lugansk(ERL) 	Europa 	2391 	1637.7 	204 	8.5 % 	139.7 	1921 	80.3 % 	266 	11.1 % 	285​
+Bandera de Islas Vírgenes de los Estados Unidos Islas Vírgenes(U) 	América 	2350 	23 500 	24 	1 % 	240 	2254 	95.9 % 	72 	3.1 % 	286​
+Bandera de Nueva Zelanda Nueva Zelanda 	Oceanía 	2295 	457.2 	25 	1.1 % 	5 	2201 	95.9 % 	69 	3 % 	287​
+Bandera de Artsaj Artsaj(ERL) 	Asia 	2234 	14 893,3 	31 	1.4 % 	206.7 	337 	15.1 % 	1866 	83.5 % 	288​
+Bandera de Yemen Yemen 	Asia 	2119 	71.1 	615 	29 % 	20.6 	1424 	67.2 % 	80 	3.8 % 	289​
+Flag of the Turkish Republic of Northern Cyprus.svg Chipre del Norte(ERL) 	Europa 	1971 	6159.4 	11 	0.6 % 	34.4 	1713 	86.9 % 	247 	12.5 % 	290​
+Bandera de Eritrea Eritrea 	África 	1970 	559.7 	7 	0.4 % 	2 	1530 	77.7 % 	433 	22 % 	291​
+Bandera de Liberia Liberia 	África 	1932 	426.5 	84 	4.3 % 	18.5 	1733 	89.7 % 	115 	6 % 	292​
+Flag of Sint Maarten.svg San Martín (Países Bajos)(U) 	América 	1767 	44 175 	27 	1.5 % 	675 	1611 	91.2 % 	129 	7.3 % 	293​
+Bandera de Mongolia Mongolia 	Asia 	1667 	527.5 	2 	0.1 % 	0.6 	1236 	74.1 % 	429 	25.7 % 	294​
+Bandera de Vietnam Vietnam 	Asia 	1551 	16 	35 	2.3 % 	0.4 	1430 	92.2 % 	86 	5.5 % 	295​
+Bandera de Burundi Burundi 	África 	1481 	133.3 	2 	0.1 % 	0.2 	773 	52.2 % 	706 	47.7 % 	296​
+Bandera de Venezuela Guayana Esequiba (TD) 	América 	1460 	5214.3 	2 	0.1 % 	7.1 	101 	6.9 % 	1357 	92.9 % 	297​298​
+Bandera de Barbados Barbados 	América 	1427 	4920.7 	10 	0.7 % 	34.5 	1057 	74.1 % 	360 	25.2 % 	299​
+Bandera de Mónaco Mónaco 	Europa 	1399 	35 871,8 	9 	0.6 % 	230.8 	1160 	82.9 % 	230 	16.4 % 	300​
+Bandera de Somalilandia Somalilandia(ERL) 	África 	1396 	397.7 	50 	3.6 % 	14.2 	1251 	89.6 % 	95 	6.8 % 	301​
+Bandera de Islas Turcas y Caicos Islas Turcas y Caicos(U) 	América 	1312 	35 459,5 	8 	0.6 % 	216.2 	1020 	77.7 % 	284 	21.6 % 	302​
+Bandera de Santo Tomé y Príncipe Santo Tomé y Príncipe 	África 	1210 	5761.9 	17 	1.4 % 	81 	1005 	83.1 % 	188 	15.5 % 	303​
+Bandera de San Martín San Martín (Francia)(U) 	América 	1146 	31 833,3 	12 	1 % 	333.3 	1006 	87.8 % 	128 	11.2 % 	304​
+Bandera de Seychelles Seychelles 	África 	1116 	11625 	3 	0.3 % 	31.3 	754 	67.6 % 	359 	32.2 % 	305​
+Flugzeugträger Silhouette.svg USS Theodore Roosevelt 	Pacífico 	1102 		1 	0.1 % 		751 	68.1 % 	350 	31.8 % 	306​307​
+Flugzeugträger Silhouette.svg Charles de Gaulle 	Atlántico 	1081 	470 000 	0 	0 % 	0 	0 	0 % 	1081 	100 % 	308​
+Bandera de Santa Lucía Santa Lucía 	América 	921 	5116.7 	13 	1.4 % 	72.2 	470 	51 % 	438 	47.6 % 	309​
+Bandera de Taiwán Taiwán(ERL) 	Asia 	890 	37.4 	7 	0.8 % 	0.3 	797 	89.6 % 	86 	9.7 % 	310​311​
+Bandera de Bután Bután 	Asia 	856 	1141.3 	1 	0.1 % 	1.3 	755 	88.2 % 	100 	11.7 % 	312​
+Bandera de Papúa Nueva Guinea Papúa Nueva Guinea 	Oceanía 	850 	98.8 	9 	1.1 % 	1 	812 	95.5 % 	29 	3.4 % 	313​
+Bandera de San Vicente y las Granadinas San Vicente y las Granadinas 	América 	746 	6781.8 	2 	0.3 % 	18.2 	147 	19.7 % 	597 	80 % 	314​
+Cruise ship side view.svg Crucero Diamond Princess 	Pacífico 	712 	191 862 	14 	2 % 	3773 	698 	98 % 	0 	0 % 	315​
+Bandera de Bermudas Bermudas(U) 	América 	688 	10 750 	12 	1.7 % 	187.5 	646 	93.9 % 	30 	4.4 % 	316​
+Bandera de Islas Feroe Islas Feroe(U) 	Europa 	654 	13 625 	1 	0.2 % 	20.8 	645 	98.6 % 	8 	1.2 % 	317​
+Bandera de Mauricio Mauricio 	África 	568 	447.2 	10 	1.8 % 	7.9 	525 	92.4 % 	33 	5.8 % 	318​
+Bandera de Tanzania Tanzania 	África 	509 	9 	21 	4.1 % 	0.4 	183 	36 % 	305 	59.9 % 	319​
+Flag of Puntland.svg Puntlandia(ERL) 	África 	496 	115.3 	9 	1.8 % 	2.1 	212 	42.7 % 	275 	55.4 % 	320​
+Bandera de Camboya Camboya 	Asia 	460 	29.8 	0 	0 % 	0 	412 	89.6 % 	48 	10.4 % 	321​
+Bandera de Isla de Man Isla de Man(U) 	Europa 	432 	5082.4 	25 	5.8 % 	294.1 	364 	84.3 % 	43 	10 % 	322​
+Bandera de Islas Caimán Islas Caimán(U) 	América 	383 	5716.4 	2 	0.5 % 	29.9 	346 	90.3 % 	35 	9.1 % 	323​
+Bandera de Guernsey Guernseynota 28​(U) 	Europa 	369 	5676.9 	13 	3.5 % 	200 	294 	79.7 % 	62 	16.8 % 	324​
+Bandera de Bonaire Bonaire(U) 	América 	360 	18 000 	3 	0.8 % 	150 	332 	92.2 % 	25 	6.9 % 	325​
+Bandera de San Bartolomé San Bartolomé(U) 	América 	300 	27 272,7 	1 	0.3 % 	90.9 	204 	68 % 	95 	31.7 % 	326​
+Bandera de Antigua y Barbuda Antigua y Barbuda 	América 	201 	2051 	6 	3 % 	61.2 	170 	84.6 % 	25 	12.4 % 	327​
+Bandera de Brunéi Brunéi 	Asia 	176 	419 	3 	1.7 % 	7.1 	169 	96 % 	4 	2.3 % 	328​
+Bandera de Granada Granada 	América 	148 	162.6 	1 	0.7 % 	0.1 	135 	91.2 % 	12 	8.1 % 	329​
+Cruise ship side view.svg Crucero Costa Atlántica 		148 		0 	0 % 		148 	100 % 	0 	0 % 	330​
+Bandera de Islas Marianas del Norte Islas Marianas del Norte(U) 	Oceanía 	129 	2224.1 	2 	1.6 % 	34.5 	32 	24.8 % 	95 	73.6 % 	331​
+Cruise ship side view.svg Greg Mortimer 		128 		1 	0.8 % 		0 	0 % 	127 	99.2 % 	332​
+Bandera de Åland Åland(U) 	Europa 	117 	3900 	0 	0 % 	0 	0 	0 % 	117 	100 % 	333​
+Bandera de Islas Vírgenes Británicas Islas Vírgenes Británicas(U) 	América 	114 	3677.4 	1 	0.9 % 	32.3 	95 	83.3 % 	18 	15.8 % 	334​
+Bandera de Dominica Dominica 	América 	113 	1591.5 	0 	0 % 	0 	105 	92.9 % 	8 	7.1 % 	335​
+Cruise ship side view.svg Crucero Grand Princess 		102 		2 	1.9 % 		0 	0 % 	95 	92.2 % 	336​
+Royal Navy Type 42 Destroyer Batch 3 silhouette.svg USS Kidd 		78 		0 	0 % 	0 	12 	15.4 % 	66 	84.6 % 	306​
+Bandera de Timor Oriental Timor Oriental 	Asia 	67 	53.2 	0 	0 % 	0 	50 	74.6 % 	17 	25.4 % 	337​
+Bandera de la Región de Magallanes y de la Antártica Chilena Territorio Chileno Antártico(TD) 	Antártida 	58 		0 	0% 	0 	0 	0% 	58 	100 % 	338​
+Bandera de Fiyi Fiyi 	Oceanía 	55 	62.5 	2 	3.6 % 	2.3 	53 	96.4 % 	0 	0 % 	339​
+Cruise ship side view.svg MS Roald Amundsen 		55 		0 	0 % 		0 	0 % 	55 	100 % 	340​
+Bandera de Macao Macao(RAE) 	Asia 	47 	0.7 	0 	0 % 	0 	46 	97.9 % 	1 	2.1 % 	341​
+Cruise ship side view.svg MS River Anuket 		45 		0 	0 % 		0 	0 % 	45 	100 % 	342​
+Bandera de Laos Laos 	Asia 	44 	6.3 	0 	0 % 	0 	41 	93.2 % 	3 	6.8 % 	343​
+Bandera de Nueva Caledonia Nueva Caledonia(U) 	Oceanía 	44 	157.1 	0 	0 % 	0 	43 	97.7 % 	1 	2.3 % 	344​
+Bandera de Islas Malvinas Islas Malvinas(U)(TD) 	América 	41 	11714.3 	0 	0 % 	0 	34 	82.9 % 	7 	17.1 % 	345​
+Bandera de San Cristobal y Nieves San Cristóbal y Nieves 	América 	37 	711.5 	0 	0 % 	0 	35 	94.6 % 	2 	5.4 % 	346​
+Bandera de República Árabe Saharaui Democrática República Árabe Saharaui Democrática(ERL) 	África 	35 	70 	5 	14.3 % 	10 	29 	82.9 % 	1 	2.9 % 	347​
+Bandera de Groenlandia Groenlandia(U) 	América 	30 	535.7 	0 	0 % 	0 	30 	100 % 	0 	0 % 	348​
+Bandera de Ciudad del Vaticano Vaticano 	Europa 	29 	36 250 	0 	0 % 	0 	27 	93.1 % 	2 	6.9 % 	349​
+Bandera de San Pedro y Miquelón San Pedro y Miquelón(U) 	América 	23 	3965.5 	0 	0 % 	0 	16 	69.6 % 	7 	30.4 % 	350​
+Bandera de San Eustaquio San Eustaquio(U) 	América 	20 	6451.6 	0 	0 % 	0 	19 	95 % 	1 	5 % 	351​
+Bandera de Islas Salomón Islas Salomón 	Oceanía 	17 	24.6 	0 	0 % 	0 	10 	58.8 % 	7 	41.2 % 	352​
+Bandera de Anguila Anguila(U) 	América 	16 	1066.7 	0 	0 % 	0 	15 	93.8 % 	1 	6.3 % 	353​
+Cruise ship side view.svg Crucero MS Zaandam 		13 		4 	30.8 % 		9 	69.2 % 	0 	0 % 	354​
+Bandera de Montserrat Montserrat(U) 	América 	13 	2280.7 	1 	7.7 % 	175.4 	12 	92.3 % 	0 	0 % 	355​
+Flag of the Greek Orthodox Church.svg Monte Athos(U) 	Europa 	13 	5909.1 	0 	0 % 	0 	0 	0 % 	13 	100 % 	356​
+Cruise ship side view.svg Crucero Coral Princess 		12 	4176.8 	3 	25 % 	1044.2 	0 	0 % 	9 	75 % 	357​
+Bandera de Acrotiri y Dhekelia Acrotiri y Dhekelia(U) 	Europa 	12 	750 	0 	0 % 	0 	9 	75 % 	3 	25 % 	358​
+Bandera de Sáhara Occidental Sahara Occidental(ERL) 	África 	10 	0.6 	1 	10 % 	0.1 	8 	80 % 	1 	10 % 	359​
+Sub.svg SeaDream I 		9 		0 	0 % 		0 	0 % 	9 	100 % 	360​
+Sub.svg HNLMS Dolfijn 		8 		0 	0 % 		8 	100 % 	0 	0 % 	361​
+Bandera de ? USNS Mercy 		7 		0 	0 % 		0 	0 % 	7 	100 % 	362​
+Bandera de Saba Saba(U) 	América 	6 	3157.9 	0 	0 % 	0 	5 	83.3 % 	1 	16.7 % 	363​
+Bandera de la Isla de Pascua Isla de Pascua(U) 	Oceanía 	5 	649.4 	0 	0 % 	0 	5 	100 % 	0 	0 % 	364​
+Bandera de Wallis and Futuna Wallis y Futuna(U) 	Oceanía 	5 	454.5 	0 	0 % 	0 	4 	80 % 	1 	20 % 	365​
+Bandera de Islas Marshall Islas Marshall 	Oceanía 	4 	67.8 	0 	0 % 	0 	4 	100 % 	0 	0 % 	366​
+Bandera de Samoa Americana Samoa Americana(U) 	Oceanía 	4 	72.7 	0 	0 % 	0 	1 	25 % 	3 	75 % 	367​
+Bandera de Samoa Samoa 	Oceanía 	2 	10.5 	0 	0 % 	0 	2 	100 % 	0 	0 % 	368​
+Bandera de Estados Federados de Micronesia Estados Federados de Micronesia 	Oceanía 	1 	9.1 	0 	0 % 	0 	1 	100 % 	0 	0 % 	369​
+Frigate.svg Leopold I 		1 		0 	0 % 		0 	0 % 	1 	100 % 	370​
+Cruise ship side view.svg MS Paul Gauguin 		1 		0 	0 % 		1 	100 % 	0 	0 % 	371​
+Bandera de Vanuatu Vanuatu 	Oceanía 	1 	3.2 	0 	0 % 	0 	1 	100 % 	0 	0 % 	372​
+Fuentes: Mapa del Centro de Ciencias e Ingeniería en Sistemas de la Universidad Johns Hopkins (2020)
+worldometers.info
+Notas:
+
+(U) Territorio de ultramar.
+(TD) Territorio disputado.
+(ERL) Estado con reconocimiento limitado.
+(RAE) Región administrativa especial.
+Estudios de seroprevalencia
+
+Mientras que las pruebas PCR detectan la presencia del virus SARS-CoV-2 en cantidades significativas en una persona en ese momento, las pruebas de anticuerpos detectan que una persona ha estado expuesta al virus en los últimos meses, aunque ya no lo tenga en la actualidad.
+
+Varios países y territorios han realizado campañas de tests de anticuerpos para determinar qué porcentaje de su población ha sido infectada por el virus. Los resultados se resumen en la tabla siguiente.
+Territorios 	Fecha del análisis 	Porcentaje con anticuerpos 	Personas que han sido infectadas 	Referencia
+España 	Europa 	15 de diciembre de 2020 	9,9 % 	4 700 000 	373​
+provincia de Bérgamo 	Italia 	23 de abril de 2020 a 3 de junio de 2020 	57 % 	635 000 	374​
+Nueva Delhi 	India 	27 de junio de 2020 a 10 de julio de 2020 	23,5 % 	5 111 000 	375​
+estado de Karnataka 	India 	16 de septiembre de 2020 	27,3 % 	19 300 000 	376​
+Nueva York (ciudad) 	Estados Unidos 	19 de abril de 2020 a 28 de abril de 2020 	22,7 % 	1 907 000 	377​
+
+378​
+estado de Nueva York 	Estados Unidos 	19 de abril de 2020 a 28 de abril de 2020 	14 % 	2 139 000 	379​
+cantón de Ginebra 	Suiza 	6 de abril de 2020 a 9 de mayo de 2020 	10,9 % 	54 000 	380​
+
+381​
+Territorios sin casos registrados
+Esta sección es un extracto de Pandemia de COVID-19 por país y territorio § Entidades sin casos confirmados[editar]
+Existen en el mundo una cantidad de territorios que han informado no tener casos o que no han informado casos. Se trata en general, de territorios de difícil acceso, ya sea por su distancia a los grandes centros poblados o por una alta regulación de su ingreso. La mayor parte de los casos son islas. Destaca un territorio que tiene frontera terrestre con otro que sí tiene casos: Turkmenistán.
+Corea del Norte
+Esta sección es un extracto de Pandemia de COVID-19 en Corea del Norte[editar]
+COVID-19 Outbreak Cases in North Korea.svg
+
+La pandemia de COVID-19 en Corea del Norte A diciembre de 2020 sigue siendo el único país que aún se desconoce algún caso confirmado, aunque fuentes del gobierno de su país hermano Corea del Sur, sospechan que la enfermedad ha afectado al país. Se cree que la supuesta llegada del virus a Corea del Norte no proviene de la Corea del Sur, que ha tenido una gran cantidad de casos de COVID-19 reportados, sino más bien de China, de donde se originó el virus. Esto se debe a que las restricciones fronterizas son más flexibles entre China y Corea del Norte que entre Corea del Norte y Corea del Sur, que tiene una frontera fuertemente militarizada, mientras que el tráfico y el comercio del mercado negro es prominente en la frontera entre China y Corea del Norte. Sin embargo, los presuntos casos de COVID-19 en las dos provincias chinas (Liaoning y Jilin) que limitan con Corea del Norte han sido bajos.382​
+
+El 23 de enero, medios de prensa estadounidenses afirmaron que había casos sospechosos en Sinuiju y que fueron puestos en cuarentena.383​ Por el contrario la información oficial desde el interior del país indica que no hay casos confirmados hasta el momento.384​
+A mediados de marzo, no estaba claro si el gobierno había evitado satisfactoriamente la propagación de COVID-19, si estaba ocultando deliberadamente los casos confirmados, o si simplemente no era capaz de realizar pruebas fiables para detectar el virus.385​
+Turkmenistán
+Esta sección es un extracto de Pandemia de COVID-19 en Turkmenistán[editar]
+Turkmenistán, dada sus severas y estrictas medidas de control sobre los asuntos de estado (salud, política, cultura, educación etc), el país, tal como ha ocurrido con Corea del Norte, convirtieron a esta nación en una de las más herméticas y represivas del planeta, lo cual llevó a no presentar cifras concretas sobre si existen o no casos confirmados de la pandemia de COVID-19.386​ No existe información oficial sobre el impacto del virus en dicho país, pues toda la prensa es controlada por el régimen del presidente Gurbanguly Berdimuhamedow.387​ Sin embargo, diversas fuentes y las sospechas de los expertos indican que la pandemia estaría afectando al país.388​389​
+Continentes afectados
+Artículo principal: Pandemia de COVID-19 por país
+
+    Casos confirmados en la ciudad de Wuhan, República Popular China, 2019-2020.
+
+    Casos confirmados en la República Popular China, 2019-2020.
+
+    Casos confirmados en el mundo, 2019-2020.
+
+Asia
+Esta sección es un extracto de Pandemia de COVID-19 en Asia[editar]
+Mapa de regiones con casos confirmados de COVID-19 al 31 de enero de 2021.
+Leyenda
+[mostrar]
+El primer caso de la Pandemia de COVID-19 en Asia y en el mundo se detectó en Wuhan y finalmente se extendió al resto de la República Popular China. Posteriormente, muchos otros países asiáticos comenzaron a confirmar casos, siendo algunos de los países más afectados Corea del Sur, Malasia e Irán. El modelo sofisticado del brote sugiere que, si bien el número de casos en el país de China habría sido mucho mayor sin intervenciones como la detección temprana y el aislamiento de los infectados, un 66 % menos de personas se habrían infectado si China hubiera implementado medidas tan poco como una semana antes. Hasta el 7 de mayo, se han notificado casos en todos los países asiáticos excepto Turkmenistán y Corea del Norte, aunque estos países han sospechado casos. No se han reportado casos en los territorios externos de Navidad y Cocos.390​391​
+Europa
+Número de casos nuevos reportados cada día en Europa.
+Esta sección es un extracto de Pandemia de COVID-19 en Europa[editar]
+Mapa de países de Europa con casos confirmados de COVID-19 (Actualizado hasta el 13 de Diciembre de 2020):
+     +1 000 000 Casos Confirmados      100 000–1 000 000 Casos Confirmados      10 000–99 999 Casos Confirmados      1 000–9 999 Casos Confirmados      100–999 Casos Confirmados      1–99 Casos Confirmados
+
+La pandemia de COVID-19 en Europa es parte de la pandemia de COVID-19 provocada por el coronavirus SARS-CoV-2. El primer caso de COVID-19 en Europa se detectó el 25 de enero en Francia: un hombre de 80 años procedente de la provincia de Hubei, que luego falleció el 15 de febrero. El 14 de febrero murió un turista chino en París, en la que se creyó se trataba de la primera muerte por COVID-19 fuera de Asia392​ pero posteriormente se descubrió que un hombre fallecido en la ciudad española de Valencia el 13 de febrero también estaba infectado de coronavirus, que había contraído en Nepal.393​
+
+Los casos iniciales se informaron en Francia, Alemania y otros países con un número relativamente bajo de casos. El 21 de febrero, se informó un gran brote en Italia, principalmente en el norte, cerca de Milán. Los casos crecieron rápidamente y el 13 de marzo de 2020 la Organización Mundial de la Salud declaró a Europa el nuevo epicentro del virus después de que la situación mejorara en China.394​ Desde esa fecha, el número de casos en cada país europeo se ha duplicado en períodos de entre dos y cuatro días.395​
+A partir del 17 de marzo de 2020, todos los países de Europa han informado al menos un caso de COVID-19 (siendo Montenegro el último en hacerlo),396​ seguidos por la Isla de Man el 19 de marzo, el Estado con reconocimiento limitado de Transnistria el 21 de marzo. Más de 50 países han informado al menos una muerte. Supone el segundo continente más afectado del mundo por la pandemia habiendo superado 2.5 millones de casos confirmados y más de 190 000 muertes.
+América
+Esta sección es un extracto de Pandemia de COVID-19 en América[editar]
+Mapa de países de América con casos confirmados de COVID-19 (Actualizado hasta el 1 de agosto de 2020):
+     +1 000 000 Casos Confirmados      100 000–1 000 000 Casos Confirmados      10 000–99 999 Casos Confirmados      1 000–9 999 Casos Confirmados      100–999 Casos Confirmados      1–99 Casos Confirmados
+
+La pandemia de COVID-19 en América es una epidemia continental que inició con la detección del primer caso de esta enfermedad el 21 de enero de 2020 en los Estados Unidos, un hombre de aproximadamente 30 años, originario del estado de Washington, que había viajado recientemente a China.397​
+
+Se notificaron casos en todos los países de América del Norte, América Central y por último el Caribe después de que Bonaire confirmara un caso el 18 de abril.
+El coronavirus se informó por primera vez en América del Sur el 26 de febrero cuando Brasil confirmó un caso en São Paulo. Desde entonces, los gobiernos de toda la región tomaron una serie de medidas para proteger a sus ciudadanos y contener la propagación de COVID-19. Todos los países sudamericanos, incluyendo al departamento de ultramar francés de Guayana Francesa y las Islas Malvinas reportaron presencia de coronavirus dentro de sus fronteras.398​
+África
+Esta sección es un extracto de Pandemia de COVID-19 en África[editar]
+Mapa de países de África con casos confirmados de COVID-19 (al 24 de diciembre de 2020):
+     Casos confirmados +100 000     Casos confirmados 10 000–99 999     Casos confirmados 1000–9999     Casos confirmados 100–999     Casos confirmados 10–99     Casos confirmados 1–9
+
+El primer caso de la pandemia de enfermedad por coronavirus o COVID-19 en África se confirmó el 14 de febrero de 2020 en Egipto,399​400​ En África subsahariana el primer caso fue confirmado en Nigeria.401​ La mayoría de los casos importados identificados han llegado de Europa y los Estados Unidos, a diferencia de otros continentes en los que provenían de China.402​ Varios países africanos tienen sistemas de salud poco desarrollados, por lo que se estima que puede existir subestimación en los casos reportados.403​ África representa el 17% de la población mundial404​, pero solo un 3,5% de las muertes por COVID-19 comunicadas.405​
+
+La propagación de COVID-19 en África ha generado alarma debido a que muchos de los sistemas de salud en el continente son inadecuados, tienen problemas como falta de equipo, falta de fondos, capacitación insuficiente de los trabajadores de la salud y transmisión de datos ineficiente.
+
+Se temía que la pandemia pudiera ser difícil de mantener bajo control en África y podría causar enormes problemas económicos si se extendía ampliamente.406​402​ Hacia mitad de abril de 2020, el suministro de ventiladores era bajo en gran parte de África: 41 países tienen solo 2000 ventiladores entre ellos, y diez países no tienen ventiladores en absoluto. Incluso los suministros básicos como el agua y el jabón están sujetos a escasez en algunas partes del continente.407​
+
+Matshidiso Moeti, de la Organización Mundial de la Salud, dijo que el lavado de manos y el distanciamiento físico podrían ser un desafío en algunos lugares de África. El aislamiento social puede no ser posible, y los desafíos pueden verse exacerbados por la prevalencia de enfermedades como la malaria, el VIH, la tuberculosis y el cólera.406​ Los expertos afirman que una estrategia basada en pruebas podría permitir a los países africanos reducir el aislamiento social que causa enormes dificultades a quienes dependen de los ingresos obtenidos cada día para poder alimentarse a sí mismos y a sus familias. Incluso en el mejor de los casos, desde Naciones Unidas se afirma que las 1300 millones de personas del continente necesitarán 74 millones de equipos de prueba y 30 000 respiradores en 2020.408​
+
+La Organización Mundial de la Salud colaboró con muchos países del continente en la instalación de laboratorios para las pruebas COVID-19.406​ Matshidiso Moeti de la OMS señaló: «Necesitamos probar, rastrear, aislar y tratar».409​ Diferentes países de África implementaron medidas preventivas como restricciones de viaje, cancelaciones de vuelos, cancelaciones de eventos,410​ cierres de escuelas y cierres de fronteras.411​ Las medidas adoptadas tenían como objetivo minimizar y controlar la cadena de transmisión, de modo que el número de casos no aumentara hasta el punto de colapsar los débiles sistemas de salud.412​
+
+Los expertos señalan que la experiencia de luchar contra el ébola ayudó a algunos países a prepararse para COVID-19.406​410​413​ Otros factores tales como la pronta respuesta de numerosos países que impusieron el confinamiento obligatorio cuando había menos de 20 casos registrados, la baja movilidad dentro del continente y hacia afuera de sus fronteras, y el hecho de que África sea el continente con la población más joven (la edad media es de 19,7 años, frente a los aproximadamente 40 años de Europa), pueden explicar el relativo éxito del continente en sus estrategias para enfrentar la pandemia.414​
+
+Para el 26 de mayo, más de la mitad de todos los países africanos experimentaban transmisión comunitaria, aunque la capacidad de prueba sigue siendo limitada.415​
+
+En diciembre de 2020 se encontraron nuevas cepas del virus en Sudáfrica y Nigeria, además de la Variant of Concern 202012/01 notificada en el Reino Unido en septiembre.
+La Unión Africana ha asegurado cerca de 300 millones de dosis de vacuna COVID-19 en el mayor acuerdo de este tipo hasta ahora para África, se anunció el 13 de enero de 2021. Esto es independiente del esfuerzo global Access to COVID-19 Tools Accelerator (COVAX) dirigido en la distribución de vacunas COVID-19 a países de bajos ingresos.416​
+Oceanía
+Esta sección es un extracto de Pandemia de COVID-19 en Oceanía[editar]
+Mapa de países de Oceanía con casos confirmados de COVID-19 (a partir del 12 de abril de 2020):      10,000+ Casos confirmados     1000-9999 Casos confirmados     100-999 Casos confirmados     10-99 Casos confirmados     1-9 Casos confirmados
+La Pandemia de COVID-19 en Oceanía comenzó el 25 de enero de 2020 con el primer caso confirmado informado en Melbourne, Australia.417​ desde entonces se ha extendido a otras partes de la región, aunque muchas pequeñas naciones insulares del Pacífico hasta ahora han evitado el brote cerrando sus fronteras internacionales.418​ El último país en declarar el inicio de la pandemia fueron los Estados Federados de Micronesia, el 8 de enero de 2021419​ Hasta el 11 de enero, cinco estados soberanos de Oceanía aún no han informado ningún caso: Kiribati, Nauru, Palaos, Tonga y Tuvalu.
+Antártida
+Esta sección es un extracto de Pandemia de COVID-19 en Antártida[editar]
+Mapa de las Reclamaciones Territoriales de la Antártida con casos confirmados de COVID-19.      +1 casos confirmados      Sin casos confirmados
+La Pandemia de Enfermedad por Coronavirus en Antártida es parte de la Pandemia de COVID-19 provocada por el virus SARS-CoV-2. Debido a su lejanía, la Antártida fue el último continente en tener casos confirmados de COVID-19 y una de las últimas regiones del mundo afectadas directamente por la pandemia. Los primeros casos se reportaron en la Base General Bernardo O'Higgins del Ejército de Chile, ubicada en el Territorio Chileno Antártico, el 21 de diciembre de 2020,420​ casi un año después de que se reportaran los primeros casos de la enfermedad en el resto del mundo. Al 22 de diciembre de 2020 hay 58 casos confirmados de la enfermedad en el continente.421​
+Prevención
+
+Las estrategias para prevenir la transmisión de la enfermedad incluyen- el distanciamiento social, el uso de máscaras, lavarse las manos, evitar tocarse los ojos, la nariz o la boca con las manos sin lavar, toser o estornudar en un pañuelo desechable o pliegue del codo.422​
+Mascarillas
+
+La CDC y la OMS recomiendan que las personas usen cubiertas faciales no médicas en lugares públicos donde exista un mayor riesgo de transmisión y donde las medidas de distanciamiento social sean difíciles de mantener.423​424​ Esta recomendación, tiene por objeto reducir la propagación de la enfermedad en personas asintomáticas y presintomáticas y es complementaria a las medidas preventivas establecidas, como el distanciamiento social. Las cubiertas faciales limitan el volumen y la distancia de viaje de las gotitas espiratorias que se dispersan al hablar, respirar y toser. Muchos países y jurisdicciones locales alientan o exigen al público el uso de mascarillas o cubiertas faciales de tela, para limitar la propagación del virus.[cita requerida]
+
+Las mascarillas también se recomiendan encarecidamente a quienes puedan haber sido infectados y a quienes cuiden a alguien que pueda tener la enfermedad. Cuando no se usa una máscara, el CDC recomienda cubrirse la boca y la nariz con un pañuelo al toser o estornudar y además recomienda usar la parte interna del codo si no se dispone de pañuelo. Se recomienda la higiene adecuada de las manos después de toser o estornudar. Se recomienda a los profesionales de la salud que interactúan directamente con pacientes con COVID-19 que utilicen mascarillas higiénicas al menos tan protectoras como la mascarilla N95, certificadas por NIOSH u otro organismo equivalente, además de otro equipo de protección personal.[cita requerida]
+Vacunas
+Artículo principal: Operación Warp Speed
+Esta sección es un extracto de Vacuna contra la COVID-19[editar]
+Una anciana recibiendo la vacuna tozinamerán, de Pfizer-BioNTech, en Gijón (España) en diciembre de 2020.
+
+La vacuna contra la COVID-19 engloba al conjunto de vacunas que tratan de prevenir la enfermedad provocada por el SARS-CoV-2, virus responsable de la pandemia por coronavirus.
+
+A fecha de 4 de enero de 2021, seis vacunas habían sido aprobadas por al menos una agencia sanitaria estatal. Otras seis estaban en fases preliminares de aprobación, y 73 se encontraban en alguna fase de ensayos clínicos. Esta gran cantidad de vacunas se puede clasificar en tres grupos, según el vector que utilizan para el material genético del SARS-CoV-2: una versión desactivada del propio coronavirus, otro virus (generalmente un adenovirus) al que se le ha insertado ARN del SARS-CoV-2, o bien ARN mensajero. Las seis ya aprobadas son:425​
+
+    ARN mensajero:
+        Tozinamerán de Pfizer-BioNTech. Está siendo utilizada en los Estados Unidos, Canadá, México, Chile, Ecuador, el Reino Unido y la Unión Europea.
+        mRNA-1273 de Moderna. Aprobada por los Estados Unidos, Canadá y la Unión Europea.
+    Adenovirus:
+        Gam-COVID-Vac o Sputnik V del Instituto Gamaleya. Basada en un adenovirus humano. Aprobada por Rusia antes de la fase 3 de los ensayos clínicos y por Bielorrusia y la Argentina para uso de emergencia.
+        AZD1222 de la Universidad de Oxford y AstraZeneca. Basada en un adenovirus de chimpancé modificado. Aprobada por el Reino Unido, la India y la Argentina. Su eficacia parece relativamente baja: un 70%, frente al 95% de las vacunas basadas en ARN mensajero.
+    Coronavirus inactivado:
+        BBIBP-CorV de Sinopharm. Aprobada en la República Popular China, los Emiratos Árabes Unidos, Baréin y Perú. Su eficacia es del 79%.
+        CoronaVac de Sinovac. Aprobada en la República Popular China, Brasil, Bolivia, Chile e Indonesia donde ha concluido la fase 3. Su efectividad está entre 50-78%.426​
+
+Las vacunas desarrolladas hasta la fecha son eficaces (en proporción variable) para prevenir la enfermedad, pero no contra la infección por el virus. Esto significa que evitan que la persona vacunada desarrolle la enfermedad o los síntomas típicos de la COVID-19 si se infecta, pero no evitan que la persona se infecte ni que le contagie el virus a otras personas.427​ 428​ 429​ La eficacia más alta contra los síntomas obtenida hasta ahora por las vacunas, del 95%, es similar a la inmunidad natural que se obtiene al infectarse con el virus SARS-CoV-2.430​ 431​
+
+Una diferencia importante entre los diferentes tipos de vacunas reside en la temperatura de conservación: las vacunas basadas en adenovirus o coronavirus inactivados se conservan en refrigeradores; mientras que las vacunas basadas en ARN mensajero requieren congeladores a -20 ºC (Moderna) o incluso a -75 ºC (Pfizer), lo cual complica su distribución. Otra diferencia es en el número de administraciones que hay que utilizar en cada persona. La mayoría requiere dos dosis, separadas por unas tres semanas, para alcanzar la inmunidad planeada. Hasta que no pase suficiente tiempo para conseguir experiencia no se sabrá cuanto tiempo dura la inmunidad proporcionada.
+Mapa por estado de aprobación por países
+Desinformación
+Esta sección es un extracto de Desinformación sobre la pandemia de COVID-19[editar]
+Grafiti en Madrid (España) con la frase «Covid escusa [sic] crash bursátil», en referencia a que la enfermedad COVID-19 es una excusa intencionada para desplomar la economía real.
+
+Después del brote inicial de la enfermedad del coronavirus 2019 (COVID-19), surgieron teorías de conspiración y desinformación con respecto al origen, la escala, la prevención, el tratamiento y otros aspectos de la enfermedad.432​433​434​435​ La desinformación se difundió a través de las redes sociales,434​436​ mensajes de texto,437​ así como los medios estatales de algunos países.434​438​
+
+La información médica errónea sobre formas de prevenir, tratar y autodiagnosticar la enfermedad por coronavirus ha circulado en las redes sociales.439​ Algunas afirmaciones falsas pueden ser estafas comerciales que ofrecen pruebas en el hogar, supuestos preventivos y curas "milagrosas".440​441​ La Organización Mundial de la Salud ha declarado una "epidemia de información falsa" de información incorrecta sobre el virus, lo que plantea riesgos para la salud mundial.434​
+Algunos hechos de desinformación afirmaron que el virus era un arma biológica con una vacuna patentada, un esquema de control de la población o el resultado de una operación de espionaje.435​436​442​ Algunas de estas teorías de desinformación y conspiración pueden tener participación estatal.438​443​444​ Algunos líderes mundiales también han minimizado la amenaza del virus y han difundido información errónea.445​446​447​
+Negacionismo
+Esta sección es un extracto de Negacionismo de la COVID-19[editar]
+
+El negacionismo de la COVID-19 es la creencia de que la enfermedad infecciosa COVID-19 (causada por el virus SARS-CoV-2) y la pandemia que esta ha provocado en 2019 y 2020 no son reales o la gravedad de las mismas no es elevada.
+Manifestante en Ohio llevando una pancarta llamando al COVID-19 como "fake virus" (virus falso).
+
+Algunos negacionistas rechazan directamente la existencia del COVID-19, mientras que otros aceptan que la enfermedad existe pero niegan su gravedad, afirmando que la alarma mundial está injustificada. Otros sostienen que el agente infeccioso fue creado en el laboratorio chino de Wuhan donde comenzó el brote, con la colaboración de gobiernos mundiales como China y EE. UU., producto de las empresas farmacéuticas o incluso del empresario multimillonario Bill Gates.448​449​ Los supuestos motivos detrás de estas teorías van desde una guerra biológica entre potencias hasta una gran estrategia de publicidad.450​
+
+Por otro lado, las recomendaciones de la comunidad científica frente a la pandemia del coronavirus fueron puestas en duda por algunos líderes mundiales como el presidente Donald Trump de Estados Unidos,451​ Jair Bolsonaro de Brasil452​ y López Obrador de México,453​ entre otros, quienes llegaron a afirmar que el virus es una pequeña gripe o resfriado que desaparecería pronto, priorizando la estabilidad de la economía sobre las medidas de aislamiento.454​455​456​ Bolsonaro calificó la emergencia sanitaria como "histeria" o "fantasía".450​ El presidente Donald Trump también llegó a sugerir que tenía evidencias de que el coronavirus fue fabricado en un laboratorio chino pese a que el director de Inteligencia Nacional de EE. UU., John Ratcliffe, declaró que el virus "no era artificial ni genéticamente modificado".457​ Antonio Pappalardo, exgeneral de los carabineros de Italia apareció en unas manifestantes en contra del gobierno de Giuseppe Conte, declarando que "el problema de nuestro planeta no es esta especie de estúpida gripe llamada coronavirus, utilizada por las grandes potencias para someternos. Son las radiaciones electromagnéticas, hay demasiados radares, demasiadas antenas”.458​
+En España, la revista Discovery Salud publicó un artículo titulado: "No hay pruebas de la existencia del 'coronavirus chino' ".459​ El cantante español Miguel Bosé declaró que la pandemia fue “la gran mentira de los gobiernos” y una estrategia de Bill Gates para inyectar microchips a la humanidad y poder controlarla por medio de la red de telefonía 5G.460​461​ El 11 de junio se realizó una manifestación antivacunas y anticoronavirus en la plaza del Callao de Madrid.462​
+Controversias
+Taiwán
+Artículo principal: Pandemia de COVID-19 en Taiwán
+
+El 28 de marzo de 2020, durante la pandemia mundial de COVID-19, Bruce Aylward, subdirector de la OMS, fue entrevistado en The Pulse, un programa de actualidad de Radio-Televisión Hong Kong (RTHK).463​ La periodista Yvonne Tong preguntó sobre el estado de Taiwán en la OMS y si la OMS reconsideraría la membresía de Taiwán después de que Taiwán acusase a China de negarle la entrada.464​ Aylward pareció esquivar la pregunta, luego, cuando se le preguntó si todavía estaba en línea, afirmó que no escuchó la pregunta, culpando a los problemas de conexión a Internet.465​ Tong se ofreció a repetir la pregunta, pero fue interrumpida por Aylward, quien le sugirió que continuara con otra. Tong repitió la pregunta, momento en el que Aylward terminó la llamada.466​ Cuando se le devolvió la llamada, se le pidió a Aylward que "comentara un poco sobre cómo le ha ido a Taiwán hasta ahora", a lo que respondió: "Ya hemos hablado de China".466​467​ Luego terminó formalmente la entrevista.466​
+Vicepresidente de Taiwán en entrevista con la BBC después del incidente.
+
+La biografía en inglés de Aylward fue eliminada de la página web de liderazgo de la OMS en los días posteriores a la entrevista.468​469​ Sin embargo, un portavoz de la OMS explicó que fue eliminado después de una solicitud del personal de Aylward el 27 de marzo para archivarlo. "El momento fue desafortunado ya que la entrevista en vídeo se volvió viral poco después de esto", dijo el portavoz.469​ El ministro de Asuntos Exteriores de Taiwán, Joseph Wu, comentó sobre la entrevista en un tuit, diciendo que la OMS "debería dejar a un lado la política para enfrentar una pandemia", y señaló la cobertura positiva sobre la respuesta de Taiwán a la pandemia en los medios globales y pidiendo que no se les confunda como parte de China.469​
+
+Después de la entrevista del 2 de abril, el Secretario de Comercio y Desarrollo Económico de Hong Kong, Edward Yau, criticó a RTHK por lo que llamó «[una violación del] Principio de Una China y los propósitos y la misión de RTHK como emisora ​​de servicio público, como se específica en la Carta [RTHK]».470​ La RTHK respondió revisando el programa y no encontró ninguna violación de su carta.471​
+La OMS ignoró la información de Taiwán sobre 7 casos de SARS provenientes de Wuhan desde el 31 de diciembre de 2019.
+
+En abril el gobierno de Taiwán hizo público un correo electrónico que fue enviado a la OMS el 31 de diciembre solicitando información sobre un posible brote en Wuhan, diciendo que habían visto informes de siete personas infectadas con una enfermedad similar al SARS.472​473​
+
+El Sr. Chen agregó que si China no notificó a la OMS que era evidencia de un encubrimiento por parte de Beijing, o si China notificó a la OMS, entonces fue un «incumplimiento del deber» de la organización no transmitir información.474​
+Alegaciones de intromisión de China
+
+Las declaraciones emitidas por Xi Jinping el 3 de febrero declararon la necesidad de un énfasis por parte de los medios estatales en «contar las historias conmovedoras de cómo [las personas] en la línea del frente están previniendo y luchando contra el virus» como una prioridad de cobertura, mientras que el alto funcionario Zhang Xiaoguo dijo que su departamento «trataría la propaganda con respecto a las medidas de control y prevención del virus como su máxima prioridad».475​476​ Por ejemplo, se ha observado que las organizaciones de medios estatales People's Daily y Global Times, junto con el subdirector de información Zhao Lijian del Ministerio de Relaciones Exteriores, publican elogios efusivos sobre la respuesta de Beijing a la epidemia,477​ como una amplia cobertura de la construcción acelerada de los nuevos hospitales en Wuhan (que Zhao afirmó se completó en 16 horas),478​ la cuarentena de Wuhan con su población de 11 millones y la cuarentena «sin precedentes de la provincia de Hubei». Aunque tales esfuerzos tuvieron un efecto cuestionable sobre la epidemia, ya que los nuevos hospitales estaban operando a menos de la mitad de su capacidad debido a la escasez de camas y recursos médicos479​480​, mientras que el cierre de Wuhan llegó demasiado tarde para ser efectivo cuando millones se habían ido, el Financial Times y otros señalaron que tales acciones ampliamente publicitadas fueron un «golpe de Estado de relaciones públicas» que mostraba que el «gobierno dominante y centralizado» de China era particularmente adecuado para lidiar con el brote,481​482​ creando la impresión de que Beijing intervino directamente a pedido de Xi Jinping.483​484​485​483​484​485​
+
+Los observadores han advertido que si bien «la admiración de los trabajadores médicos de primera línea es generalizada y sincera», los medios estatales también deberían destacar la realidad de que muchos de esos trabajadores «carecen de equipo de protección» y que más de 3000 han sido infectados desde el brote y que la atención de los medios puede brindarles apoyo público para obtener algunos equipos muy necesarios. El New York Times ha señalado que tales intentos de propaganda del gobierno para controlar la narrativa se han visto con desconfianza entre los individuos más jóvenes, quienes, a diferencia de las personas mayores, dependen menos de los medios estatales y en su lugar han buscado «información de primera mano y estudios en los medios de comunicación profundos sobre la epidemia en la web», lo que sugiere que el gobierno central no estaba en contacto con la población más joven.486​
+
+John Mackenzie, miembro del comité de emergencia de la Organización Mundial de la Salud, criticó a China por ser demasiado lenta para compartir todos los casos infectados, especialmente durante las principales reuniones políticas en Wuhan después de que Tedros Adhanom elogió a China por ayudar a «prevenir la propagación del coronavirus a otros países».487​ El presidente de los Estados Unidos, Donald Trump, dijo que China era «muy reservada y desafortunada» con respecto a la información sobre la pandemia.488​ Yanzhong Huang, un experto en salud de la Universidad de Seton Hall, dijo que China podría haber sido más contundente y que hubo «un encubrimiento de inacción».489​
+
+La comunidad de inteligencia de Estados Unidos dice que China redujo intencionalmente su número reportado de casos de coronavirus.490​ Medios como político, Foreign Policy y Bloomberg han afirmado que los esfuerzos de China para enviar ayuda a los países afectados por el virus es parte de un impulso de propaganda por la influencia global.491​492​493​ El jefe de política exterior de la UE, Josep Borrell, advirtió que existe «un componente geopolítico que incluye una lucha por la influencia a través del hilado y la política de generosidad».494​ Borrell también dijo que "China está presionando agresivamente el mensaje de que, a diferencia de Estados Unidos, es un socio responsable y confiable”.495​
+
+El escritor estadounidense Gordon G. Chang describió la entrevista de Bruce Aylward, sobre la negación a responder preguntas sobre Taiwán, como emblemática de la influencia de China sobre las organizaciones internacionales.496​ El 2 de abril, The Globe and Mail mencionó la entrevista de Aylward como un ejemplo de la «deferencia sorprendente» de la alta dirección de la OMS hacia China, señalando que la contribución financiera china a la OMS es minúscula en relación con la de los Estados Unidos. En febrero de 2020, Aylward dirigió una delegación de la OMS a Wuhan por la crisis del coronavirus. El personal chino en la delegación de Aylward ascendió a 12 de un total de 25, y se informó que pudieron manipular el lenguaje utilizado en el informe final de la delegación. Más tarde, uno de los delegados declaró que el equipo «quería llamarlo un patógeno peligroso», y sentían que la palabra «peligroso» podría estar vinculada al bioterrorismo. El informe final se refiere al coronavirus como «un nuevo patógeno que es altamente contagioso, puede propagarse rápidamente y debe considerarse capaz de causar enormes impactos en la salud, la economía y la sociedad».497​
+Impacto
+Sanitario
+Esta sección es un extracto de Colapso sanitario de 2020[editar]
+Gráfico del aumento de defunciones por COVID-19 desde enero a abril de 2020 según los datos de la Organización Mundial de la Salud a nivel mundial.
+
+El colapso sanitario de 2020 es el desbordamiento acaecido en los sistemas hospitalarios de diversos países del mundo a raíz de la pandemia de COVID-19.498​ El virus ha puesto tales sistemas al límite, provocando que se vieran sobrepasados y paralizados, especialmente por insuficiencia de la infraestructura, el personal y los medios necesarios para afrontar las circunstancias epidemiológicas. La misma Organización Mundial de la Salud informó de que las muertes por enfermedades tratables pueden «aumentar drásticamente»,499​ el colapso también afecto a otros campos como la sobrepoblación en campo santos y la saturación de los servicios funerarios.500​501​502​
+Uno de los principales puntos que mostraron el colapso, fue el desbordamiento de cadáveres en calles de Wuhan (China),503​ Guayaquil y Quito (Ecuador),504​ así como la excavación de fosa comunes, morgues provisionales y sepulturas e incineraciones en masa en países como Estados Unidos,505​ Brasil,506​ Italia507​ e Irán.508​ En el continente americano los sistemas de salud ya se encontraban en una frágil crisis por la epidemia de dengue de 2019-2020 según la Organización Panamericana de la Salud, que continúa paralelamente a la pandemia de coronavirus.509​
+Salud mental
+Esta sección es un extracto de Salud mental durante la pandemia de COVID-19[editar]
+La salud mental durante la pandemia de enfermedad por coronavirus se ha visto afectada alrededor del mundo.510​El COVID-19 está impactando los trabajos e ingresos de las personas, también afectando su capacidad social, la confianza puesta en personas e instituciones, causando así también, un largo plazo de ansiedad y preocupación.511​
+Impacto sobre otras enfermedades respiratorias
+
+Al propagarse la pandemia por el hemisferio norte, la epidemia anual de gripe terminó abruptamente. En el hemisferio sur, prácticamente no hubo epidemia de gripe en 2020 durante el invierno austral (junio-septiembre). También se ha observado una fuerte disminución de casos de infección por virus sincitial respiratorio. No están claras las causas pero se atribuye a la disminución del tráfico internacional de pasajeros, al uso de mascarillas y a las medidas de distanciación social.512​
+Socioeconómico
+Esta sección es un extracto de Impacto socioeconómico de la pandemia de COVID-19[editar]
+Países del mundo cuyas economías entrarán en recesión en 2020. (en marrón)
+Personas en Wuhan haciendo cola frente a una farmacia para comprar máscaras quirúrgicas.
+
+La pandemia de COVID-19 ha provocado, entre otras cosas, un impacto socioeconómico global, a raíz del efecto sanitario directo de la propia enfermedad y sobre todo de los esfuerzos por controlar su expansión, que provoca rápidamente la saturación de los sistemas sanitarios si no se aplican medidas de prevención y restricción. Esto está afectando tanto a la economía de los países como al estilo de vida de sus ciudadanos.513​
+
+Esta crisis, a veces llamada el Gran Confinamiento o la crisis económica por Coronavirus, está causando la mayor recesión mundial de la historia.514​515​ Podría ocasionar que la economía mundial se reduzca un 5% durante el 2020, en vez de crecer hasta el 2,5% como se preveía un año antes.516​ De manera colectiva, los empleos destruidos representan más de una cuarta parte de todos los puestos de trabajo en estas economías. A medida que las empresas pierden ingresos, el desempleo aumenta considerablemente, lo que transforma una perturbación en la oferta sobre una perturbación en la demanda aún más extensa para la economía.517​
+
+Durante los primeros meses, cuando la epidemia se limitaba casi exclusivamente a China, se produjo escasez generalizada de productos farmacéuticos,518​ electrónicos 519​y otros productos manufacturados debido a la paralización de numerosas fábricas en China.520​521​ En ciertas localidades (en particular en Italia y Hong Kong)522​523​ se observaron compras de pánico y la consiguiente escasez de comida y otros artículos esenciales de abastecimiento.524​ La caída de la demanda de materias primas por el parón de actividad en China primero y luego en el resto del mundo llevó a fuertes caídas de precios, en particular del petróleo, lo cual perjudicó a los países y empresas productores. El miedo de los inversores les llevó a refugiar su dinero en valores considerados seguros, en particular la deuda pública de los países percibidos como más solventes.
+
+Los mercados bursátiles mundiales empezaron a caer fuertemente el 24 de febrero de 2020 debido al aumento significativo en el número de casos de COVID-19 fuera de China continental.525​526​ Para el 28 de febrero de 2020, los mercados bursátiles de todo el mundo acumulaban los mayores descensos de una semana desde la crisis financiera de 2008.527​528​529​ Algunos comentaristas llamaron a esta caída un «cisne negro»530​, si bien el inventor del concepto de cisne negro no está de acuerdo con la etiqueta porque considera que una pandemia como la de covid-19 era altamente probable.531​ Las fuertes caídas prosiguieron las semanas siguientes, con fuertes bajadas el 9 de marzo y el 12 de marzo.
+
+A mediados de marzo la gravedad de la crisis obligó a intervenir a los gobiernos y a los bancos centrales de muchos países, a través de la política monetaria y la fiscal para evitar el colapso de la economía532​533​ Los mercados bursátiles rebotaron rápidamente debido a la intervención de los bancos centrales de las principales potencias financieras, que inundaron de liquidez el sistema y redujeron fuertemente los tipos de interés. El índice estadounidense S&P500 recuperó su valor anterior a la pandemia en junio 534​ y en noviembre se batió el récord de subida mensual en las principales bolsas del mundo.535​ Además de las acciones, también subieron fuertemente otros activos como el oro 536​ y las criptomonedas.537​ Los mercados de Estados Unidos y de Alemania terminaron el año en máximos históricos, mientras que los de otros países como el Reino Unido y España cerraron 2020 con fuertes pérdidas.538​ Las principales fortunas del mundo vieron aumentar su patrimonio alrededor de un 24% a lo largo del año.539​
+A medida que se propagaba la pandemia, se cancelaban o posponían las conferencias y eventos mundiales en tecnología, moda, deportes, entre otros.540​
+Mercado de valores
+Esta sección es un extracto de Colapso del mercado de valores de 2020[editar]
+Movimiento del Dow Jones Industrial Average entre diciembre de 2019 y marzo de 2020, que muestra el máximo histórico en febrero, y el desplome en febrero y marzo durante la pandemia del COVID-19.
+
+El colapso del mercado de valores de 2020 fue un colapso global del mercado de valores que ocurrió entre febrero y abril de 2020, durante el inicio de la pandemia de coronavirus de 2020.541​542​543​
+
+El promedio industrial Dow Jones, el índice S&P 500 y el NASDAQ-100 cayeron en una corrección el 27 de febrero durante una de las peores semanas de negociación desde la crisis financiera de 2007-08.544​545​ Los mercados durante la semana siguiente (del 2 al 6 de marzo) se volvieron extremadamente volátiles, con oscilaciones del 3 % o más por sesión diaria (excepto el 6 de marzo).546​547​ El 9 de marzo, los tres índices de Wall Street cayeron más del 7 % y la mayoría de los mercados mundiales reportaron severas contracciones, principalmente en respuesta a la guerra de precios del petróleo entre Rusia y Arabia Saudí.548​549​ Esto se conoció coloquialmente como Lunes Negro (Black Monday en inglés), y fue la peor caída desde la Gran Recesión en 2008.550​551​ Tres días después del Black Monday hubo otra caída, Jueves Negro (Black Thursday en inglés), donde las acciones en Europa y América del Norte cayeron más del 9 %. Wall Street experimentó su mayor caída porcentual en un solo día desde el Lunes Negro de 1987, y el FTSE MIB cayó casi un 17 %, convirtiéndose en el mercado más afectado durante el Jueves Negro.552​553​554​
+A mitad de marzo la gravedad de la crisis obligó a intervenir a los gobiernos y a los Bancos Centrales a través de la política monetaria y la fiscal para evitar el colapso definitivo de la economía.555​556​
+Financiero
+Esta sección es un extracto de Impacto financiero de la pandemia de COVID-19[editar]
+Movimiento del precio del WTI a partir de 2019. El 20 de abril de 2020 los precios cayeron por debajo de cero por primera vez en la historia.
+La crisis financiera asociada con la pandemia de enfermedad por coronavirus de 2019-2020 tiene un impacto amplio y severo en los mercados financieros, incluidos los mercados de acciones, bonos y materias primas (incluidos el petróleo crudo y el oro). Los principales eventos incluyeron una guerra de precios del petróleo descrita entre Rusia y Arabia Saudita después de no alcanzar un acuerdo con la OPEP+ que resultó en un colapso de los precios del petróleo crudo y el colapso del mercado de valores en marzo de 2020. Los efectos sobre los mercados son parte de la recesión del coronavirus y entre los muchos impactos socioeconómicos de la pandemia.
+Aviación
+Esta sección es un extracto de Impacto en la aviación de la pandemia de COVID-19[editar]
+Vuelo casi vacío de Pekín a Los Ángeles, 15 de marzo de 2020.
+Desinfección de un avión, 6 de marzo de 2020.
+
+La pandemia de enfermedad por coronavirus de 2019-2020 ha tenido un impacto significativo en la industria de la aviación debido a las restricciones de viaje resultantes así como por la reducción de la demanda de vuelos. Lo anterior ha ocasionado que los aviones vuelen vacíos entre aeropuertos, se hayan cancelado vuelos, se hayan cerrado aeropuertos y que la gran mayoría de aviones se encuentren en tierra. Las aerolíneas han jugado un papel directo en la forma en que la enfermedad COVID-19 se propagado alrededor del mundo.557​558​
+De acuerdo al cuarto informe de la Asociación Internacional de Transporte Aéreo del 14 de abril de 2020, se estima una reducción de ingresos del 55 % a nivel global para el 2020 por venta de pasajes.559​Los fabricantes de aviones y los operadores de aeropuertos también han despedido empleados. Según algunos comentaristas560​, la crisis resultante es la peor jamás encontrada en la historia de la aviación.
+Transporte
+Esta sección es un extracto de Impacto de la pandemia de COVID-19 en el transporte público[editar]
+Pegatinas rojas colocadas en cada asiento de un metro en Moscú, el tren anima a las personas al distanciamiento social
+
+La pandemia de COVID-19 ha tenido un impacto significativo en el transporte público. El uso del transporte público también ha ayudado a propagar mayormente la COVID-19.561​562​ No obstante, las empresas de los diferentes medios de transporte, ya sea por disposiciones legales o por iniciativa propia, han tomado medidas a fin de evitar al máximo los contagios, limitando el aforo por asientos o metro cuadrado, además de realizar desinfecciones periódicas con elementos como radiación ultravioleta (UV), generadores de ozono y oxígeno activo, además de la utilización de sustancias químicas que debilitan o destruyen al virus.563​
+Empresas como Apple y Google han proporcionado informes en tendencias de movilidad, rastreando la posición geográfica de dispositivos móviles para comparar los traslados en transporte público, privado, y a pie, en las principales ciudades de diferentes países. Con esta información se puede obtener gráficos para comparar de manera visual el modo en que se ha visto impactada la movilidad a raíz de la pandemia. En el caso de Apple, los datos se han generado desde el 13 de enero de 2020, fecha que se consideró como punto de referencia, a partir de la cual se comparan las fechas subsecuentes, reduciéndose la movilidad para el día 29 de octubre de 2020 a un 34% de la que se tuvo el 13 de enero, manejando en la Ciudad de México, por nombrar un ejemplo.564​
+Educación
+Esta sección es un extracto de Impacto en la educación por la pandemia de COVID-19[editar]
+La pandemia ha obligado a estudiantes a tomar clases virtuales.
+
+La pandemia de COVID-19 ha afectado a los sistemas educativos en todo el mundo. Casi la totalidad de instituciones educativas de todos los niveles debieron cancelar sus actividades presenciales, en cumplimiento de las disposiciones adoptadas por las autoridades de los distintos países, tendientes a disminuir la propagación de la pandemia y sus consecuencias fatales.
+Cierre de instituciones educativas debido a la COVID-19:     Cierres de escuelas en todo el país     Cierres de escuelas localizados     Sin cierre de escuelas     Sin datos
+
+Según un informe de UNICEF, a inicios de mayo de 2020 aproximadamente 1287 millones, un 90% del total de estudiantes del mundo, estaban afectados debido al cierre de instituciones educativas, 182 países continuaban la interrupción total de los servicios de educación y 8 lo hacían parcialmente de modo local en distintas jurisdicciones.565​
+
+El cierre de escuelas en respuesta a COVID-19 ha arrojado luz sobre diversos problemas sociales y económicos, incluida la deuda estudiantil,566​ el aprendizaje digital,567​568​ la inseguridad alimentaria,569​ la carencia de un lugar permanente para residir,570​571​ el acceso a servicios de salud,572​ el acceso a internet,573​ los servicios destinados a personas con alguna discapacidad,574​ entre otros.
+
+En respuesta al cierre de escuelas, la UNESCO recomendó el uso de programas de aprendizaje a distancia y aplicaciones y plataformas educativas abiertas que las escuelas y los maestros pueden utilizar para llegar a los alumnos de forma remota y limitar la interrupción de la educación.575​ Algo menos de 100 países adoptaron alguna forma no presencial o digital a fin de no interrumpir totalmente la continuidad de los procesos de enseñanza - aprendizaje. Un número similar de países optaron por mantener el cierre de los establecimientos hasta que las tasas de propagación bajaran a límites no riesgosos.576​
+La pandemia de enfermedad por coronavirus puede profundizar la crisis de aprendizaje global,577​ e incrementar significativamente el número de estudiantes afectados por «pobreza educativa». Más del 50% de los niños de países de ingresos medios o bajos se encuentran en esa situación.578​ La desigualdad educativa ya existente puede incrementarse exponencialmente debido a las diferencias en el acceso a elementos básicos como un escritorio donde realizar las tareas o el instrumental tecnológico, sumada a las diferencias del nivel educativo alcanzado por los padres o cuidadores, responsables en esta instancia de apoyar el proceso de aprendizaje de los niños.579​
+Internet
+Esta sección es un extracto de Impacto en el funcionamiento de internet por la pandemia de COVID-19[editar]
+El #Yomequedoencasa es originario de España y se expandió a países hispanoamericanos,580​ el movimiento vía redes sociales busca promover la inmovilización social para evitar el avance de la pandemia de COVID-19.581​

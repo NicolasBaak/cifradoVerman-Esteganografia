@@ -28,38 +28,45 @@ int menu(){
 
    return seleccion;
 }
-
+/* 
+Algoritmo de cifrado Vernam:
+   Entrada: (nombre del archivo, clave de cifrado, nombre del archivo final ya cifrado)
+   Salida: archivo cifrado y almacenado en resultados/secretos/cifrado.txt
+*/
 void vernam(char *fn1, char *key, char *fn2){
 	FILE *f1,*f2;
 	char ch;
 	int numbytes;
 	int keysize = strlen(key);
 	unsigned int ct=0;
-	
+
+	/* Abrir el archivo a cifrar y comprobar que todo esta correcto, con permisos de lectura a nivel de bit*/
 	f1 = fopen(fn1,"rb");
 	if(f1==NULL){
 		printf("El Archivo %s no Existe!\n", fn1);
 		exit(0);
 	}
+   /* Abriri o crear el archivo de resultado cifrado con permisos de escritura a nivel de bit*/
 	f2 = fopen(fn2,"wb");
-	
-	
+
 	while ( (numbytes = fread(&ch, sizeof(char),1, f1)) > 0){
-		//terminado
+		//por cada letra del texto se utiliza una letra de la clave y se aplica XOR.
 		ch = ch ^ key[ ct ];
+      // el resultado se alacena en el archivo de salida cifrado.
 		fwrite( &ch, sizeof(char),1, f2);
+      // Esto es para hacer no pasarse del tamaño de la clave.
 		if(ct<keysize)
 			ct++;
 		else
 			ct=0;
-}
+   }
 	
 	/* Cierre de archivos */
 	fclose(f1);
 	fclose(f2);
 }
 
-/* Funci�n recursiva para borrar un arbol */
+/* Funcion recursiva para borrar un arbol */
 void BorrarArbol(tipoNodo *n)
 {
    if(n->cero) BorrarArbol(n->cero);
@@ -67,7 +74,11 @@ void BorrarArbol(tipoNodo *n)
    free(n);
 }
 
-/* Funcion para descomprimir un archivo */
+/* 
+Algoritmo Huffman:  Funcion para descomprimir un archivo
+   Entrada: (nombre del archivo comprimido, nombre del archivo final descomprimido)
+   Salida: archivo descomprimido y almacenado en resultados/secretos/descomprimido.txt
+*/
 void decompres(char* entrada, char* salida){
    tipoNodo *Arbol;        /* Arbol de codificaci�n */
    long int Longitud;      /* Longitud de fichero */
@@ -168,7 +179,11 @@ void decompres(char* entrada, char* salida){
    BorrarArbol(Arbol);                 /* Borramos el �rbol */
 }
 
-/* Funcion para comprimir un archivo */
+/* 
+Algoritmo Huffman:  Funcion para comprimir un archivo
+   Entrada: (nombre del archivo , nombre del archivo final comprimido)
+   Salida: archivo comprimido y almacenado en resultados/secretos/comprimido.txt
+*/
 void compres(char* entrada, char* salida){
     tipoNodo *Lista;       /* Lista de letras y frecuencias */
    tipoNodo *Arbol;       /* Arbol de letras y frecuencias */
@@ -421,7 +436,9 @@ tipoTabla *BuscaCaracter(tipoTabla *Tabla, char c)
    return t;
 }
 
-/* Estega.c */
+/* ========== Estega.c ========*/
+
+
 void printBin(unsigned char b){
   int i;
   for (i=7; i>=0; i--) { // muestra en binario
@@ -430,6 +447,11 @@ void printBin(unsigned char b){
   } 
 }
 
+/* 
+Algoritmo Estenografía: Se llamara a esta función cuando se necesite almacenar la informacion en la imagen .bmp
+   Entrada: (nombre de la imagen, nombre de archivo para ocultar)
+   Salida: el archivo se almacena en la imagen sin notarse a la vista y usando el bit menos significativo
+*/
 void oculta(char* archivoImg, char* archivoDat){
 	unsigned char B, M = 1; 
 	unsigned char c = 0;
@@ -444,8 +466,8 @@ void oculta(char* archivoImg, char* archivoDat){
 	unsigned char * bufferOrig, * bufferOut;
 	
 	
-	out=fopen(archivoImg, "rb+"); // la imagen
-	orig=fopen(archivoDat, "rb"); //el archivo a ocultar
+	out=fopen(archivoImg, "rb+"); // la imagen donde se oculta el archivo
+	orig=fopen(archivoDat, "rb"); // el archivo a ocultar
 	
 	if(out==NULL){ 
 		printf("error al leer el archivo  %s !", archivoImg);
@@ -605,7 +627,6 @@ void recupera(char *archivoImg){
 	cont=0;  
 	
 	//printf("\nProceso de recuperacion de archivo\n");
-
 	//brincar encabezado del formato de imagen (sz_header_img)
 	
 	long k = sz_header_img;
@@ -678,16 +699,11 @@ void recupera(char *archivoImg){
 		printf("error al leer el archivo  %s !", nnombre );
 		exit(1);
 	}
-	
 	result = fwrite (buffer2,1,h2.sz,nuevo);
 	//printf("\nSe genero archivo: %s \n", nnombre);
-	
 	free(buffer2);
 	free(bufferOut);
-	
 	fclose(out);
 	fclose(nuevo);
-	
 	//printf("\nArchivo oculto %s recuperado con exito!\n",h2.nf);
-	
 }

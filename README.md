@@ -1,20 +1,23 @@
 ### Programa que usa el algoritmo Verman, Comprimir/Descomprimir y Estenografia
 
-para compilar el proyecto necesitas usar el comando
+Para compilar el proyecto usamos el comando en linux
 
 ```
 g++ -o 'nombre-ejecutable' 'nombre-codigo.cpp'
 ```
-en linux, por ejemplo:
+Por ejemplo:
 ```
-g++ -o final final.cpp
+g++ -o proyecto proyecto.cpp
 ```
 
 Ahora para ejecuta el programa
 ```
 ./'nombre-ejecutable'
 ```
-puede que sea necesario crear una carpeta llamada 'resultados' y dentro de esta dos carpetas 'secreto' y 'descifrado'
+En resultados/secreto
 
-en resultados/secreto Se almacenan los archivos comprimidos y cifrados
-en resultados/descifrado Se almacena el archivo expraido de la imagen
+    Se almacenan los archivos comprimidos y cifrados
+
+En resultados/descifrado 
+
+    Se almacena el archivo expraido de la imagen
